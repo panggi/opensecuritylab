@@ -1,0 +1,95 @@
+<item>
+	<title>Load Balancing a http and https enabled site with Apache and Ubuntu</title>
+	<link>http://www.opensecuritylab.org/load-balancing-a-http-and-https-enabled-site</link>
+	<pubDate>Wed Oct 19 03:29:00 -0700 2011</pubDate>
+	
+	<dc:creator><![CDATA[Panggi Libersa Jasri Akadol]]></dc:creator>
+	
+	
+
+	<category><![CDATA[Uncategorized]]></category>
+
+	<category domain="category" nicename="uncategorized"><![CDATA[Uncategorized]]></category>
+
+  <guid isPermaLink="false">http://www.opensecuritylab.org/load-balancing-a-http-and-https-enabled-site</guid>
+	<description></description>
+	<content:encoded><![CDATA[<p>If you are a web developer and want to add SSL feature for the security reason, i bet that you will not set the SSL to all the pages on your website. Why? because it is SO SLOW!!</p>
+<p>By using SSL , it means that the traffic between the client and server is encrypted and causing the bigger data transfered than without one. So, many of the developers will apply the SSL feature on specific places that need protection such as settings and message feature and then switch back to http when it comes to the page that doesn't need to be protected.</p>
+<p>Everything looks nice and clean until you need to load balance your site because of the increasing of the traffic. Yes, load balance means you need more than one server. And if you manage more than one server , it means that you need to do something with your SSL certificate that you already have for one domain only. That's not the only problem, as we know some big guy out there like <a href="http://www.rackspace.com/cloud/cloud_hosting_products/loadbalancers/compare/" target="_blank">Rackspace</a> has Load Balancing as their service but it can not manage multiple ports ( 80 + 443 ) at once. So, what do you have to do?</p>
+<p>Lets make one! :)</p>
+<p>In this tutorial, i assume that you are already familiar with Linux Server.</p>
+<p>- Install Apache server</p>
+<script src="https://gist.github.com/1297964.js?file=install-apache.txt"></script>
+<p>- Enable modules needed</p>
+<script src="https://gist.github.com/1297973.js?file=modules-for-load-balancing-apache.txt"></script>
+<p>- Comment out the content of /etc/apache2/sites-available/default</p>
+<p>- Edit the /etc/apache2/httpd.conf</p>
+<script src="https://gist.github.com/1297982.js?file=httpd.conf"></script>
+<p>- Restart the Apache server and voila!</p>]]></content:encoded>
+	<excerpt:encoded><![CDATA[If you are a web developer and want to add SSL feature for the security reason, i bet that you will not set the SSL to all the pages on your website. Why? because it is SO SLOW!! By using SSL , it means that the traffic between the client and serv...]]></excerpt:encoded>	
+
+	<wp:post_date>Wed Oct 19 03:29:00 -0700 2011</wp:post_date>
+	<wp:post_date_gmt>Wed Oct 19 03:29:00 -0700 2011</wp:post_date_gmt>
+	<wp:comment_status>open</wp:comment_status>
+	<wp:ping_status>open</wp:ping_status>
+	<wp:post_id>76116427</wp:post_id>
+	<wp:post_name>load-balancing-a-http-and-https-enabled-site</wp:post_name>
+	<wp:status>publish</wp:status>
+	<wp:post_parent>0</wp:post_parent>
+	<wp:menu_order>0</wp:menu_order>
+	<wp:post_type>post</wp:post_type>
+	<wp:post_password></wp:post_password>
+	<wp:is_sticky>0</wp:is_sticky>
+
+	
+		<wp:comment>
+			<wp:comment_id>11286591</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[diego]]></wp:comment_author>
+				<wp:comment_author_url><![CDATA[]]></wp:comment_author_url>
+			
+			<wp:comment_date>Tue Aug 07 23:25:57 -0700 2012</wp:comment_date>
+			<wp:comment_date_gmt>Tue Aug 07 23:25:57 -0700 2012</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Just what I need
+Thanks,
+Diego]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+		<wp:comment>
+			<wp:comment_id>11851703</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[AA]]></wp:comment_author>
+				<wp:comment_author_url><![CDATA[]]></wp:comment_author_url>
+			
+			<wp:comment_date>Thu Feb 14 08:55:35 -0800 2013</wp:comment_date>
+			<wp:comment_date_gmt>Thu Feb 14 08:55:35 -0800 2013</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Thanks for laying this out plainly, with helpful comments. And thanks for not trying to post some massive super-terrific solution all at once - very quick read! :)]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+		<wp:comment>
+			<wp:comment_id>11927844</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[Abdus Samad]]></wp:comment_author>
+				<wp:comment_author_url><![CDATA[]]></wp:comment_author_url>
+			
+			<wp:comment_date>Sat Apr 13 18:25:48 -0700 2013</wp:comment_date>
+			<wp:comment_date_gmt>Sat Apr 13 18:25:48 -0700 2013</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Hey thanks for the detailed info. I am using self signed certficate right now for testing purpose. In that case what should be the value of SSLCertificateFile /etc/apache2/ssl/apache.pem
+        SSLCertificateKeyFile /etc/apache2/ssl/apache.key
+
+
+
+
+]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+</item>

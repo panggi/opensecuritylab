@@ -1,0 +1,150 @@
+<item>
+	<title>Crack Result Example when using rcrack [Rainbow Tables]</title>
+	<link>http://www.opensecuritylab.org/crack-result-example-when-using-rcrack-rainbo</link>
+	<pubDate>Sat Jul 17 05:39:00 -0700 2010</pubDate>
+	
+	<dc:creator><![CDATA[Panggi Libersa Jasri Akadol]]></dc:creator>
+	
+	
+		<category domain="tag" nicename="Cryptography"><![CDATA[Cryptography]]></category>
+	
+		<category domain="tag" nicename="Security"><![CDATA[Security]]></category>
+	
+
+	<category><![CDATA[Uncategorized]]></category>
+
+	<category domain="category" nicename="uncategorized"><![CDATA[Uncategorized]]></category>
+
+  <guid isPermaLink="false">http://www.opensecuritylab.org/crack-result-example-when-using-rcrack-rainbo</guid>
+	<description></description>
+	<content:encoded><![CDATA[<div class="CodeRay">
+  <div class="code"><pre>rcrack ../md5_tables/*.rt -l hash_baru.txt</pre></div>
+</div>
+
+
+<p>md5_alpha-numeric#1-7_0_2400x40000000_panggi#000.rt:
+488329216 bytes read, disk access time: 102.84 s
+verifying the file&hellip;
+searching for 40 hashes&hellip;
+plaintext of 3b11cefd11fc6649d26815b5fe3b34f1 is P45T1
+plaintext of c9122fd7bae0681b62a39ddfc1c7fb19 is LOVE
+plaintext of 20392298d6b78e0890cd22a7bf071c49 is PANGGI
+plaintext of d81bf97286c617c77b679478ce8b72b2 is 050479
+cryptanalysis time: 144.99 s
+151670784 bytes read, disk access time: 17.41 s
+searching for 35 hashes&hellip;
+cryptanalysis time: 9.75 s</p>
+
+<p>&hellip;&hellip;..</p>
+
+<p>md5_loweralpha-numeric#1-7_0_2400x40000000_panggi#000.rt:
+488329216 bytes read, disk access time: 12.34 s
+verifying the file&hellip;
+searching for 31 hashes&hellip;
+plaintext of c94630fe9dea660ba53ddf5d3a41e802 is herc
+plaintext of dcb76da384ae3028d6aa9b2ebcea01c9 is sayang
+plaintext of 64e623a92934d8dda6483c1d79eaf782 is abialif
+plaintext of 91d9a5f5ffd7cf8955127ed6d5c39693 is c4p3k
+plaintext of 4f8843b8ca1775ae119e9e5b9a7fd7b8 is ira1
+plaintext of cded7f1efca84195ebde9495134e3a3e is 1234q
+plaintext of 3fde6bb0541387e4ebdadf7c2ff31123 is 1q2w3e
+cryptanalysis time: 106.48 s
+151670784 bytes read, disk access time: 3.28 s
+searching for 24 hashes&hellip;
+cryptanalysis time: 7.19 s</p>
+
+<p>&hellip;&hellip;&hellip;</p>
+
+<p>md5_mixalpha-numeric-symbol14-space#1-6_0_2400x40000000_panggi#000.rt:
+488329216 bytes read, disk access time: 10.02 s
+verifying the file&hellip;
+searching for 15 hashes&hellip;
+plaintext of 9ac17fc47347d505c92e3ca31fee675d is 4Dm1n
+plaintext of b65a81125dbfaab4a3ecdff26a979309 is Pa55
+plaintext of d695f8f703c1b3b0dce9d588a4d4abad is UN1k0M
+plaintext of 75003783871e9404cd0793ca81594841 is G0D$
+plaintext of 464b59d944c93b6a5eb3dfd0abf15114 is c(%H2n
+plaintext of d740ee7f1cd46b3d536a6f4331a4c77f is *$<sup>#&amp;3</sup>
+plaintext of 13781c244d5bb85a296bcbe4ac7992f7 is h@xX0r
+cryptanalysis time: 29.69 s
+151670784 bytes read, disk access time: 2.24 s
+searching for 8 hashes&hellip;
+cryptanalysis time: 0.86 s
+&hellip;&hellip;&hellip;&hellip;&hellip;</p>
+
+<p>md5_numeric#1-9_0_3000x3000000_panggi#000.rt:
+48000000 bytes read, disk access time: 0.59 s
+verifying the file&hellip;
+searching for 1 hash&hellip;
+plaintext of bcdc908a16dbfe1297b4b0891ccf9ed7 is 29041987
+cryptanalysis time: 14.72 s</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>statistics
+-------------------------------------------------------
+plaintext found: 40 of 40 (100.00%)
+total disk access time: 1288.00 s
+total cryptanalysis time: 911.11 s
+total chain walk step: 368576005
+total false alarm: 577223
+total chain walk step due to false alarm: 467998999
+
+result
+-------------------------------------------------------
+319f4d26e3c536b5dd871bb2c52e3178 PASSWORD hex:50415353574f5244
+6f3e813835f4a8a5b6f89cefc17800d4 AKU DIA hex:414b5520444941
+02b41cfe10c96e61ed2b2f2ca656cef2 HERCULES hex:48455243554c4553
+e632a1696eb89cd5d33be5ba05cb3fa8 LETMEIN hex:4c45544d45494e
+3b11cefd11fc6649d26815b5fe3b34f1 P45T1 hex:5034355431
+c9122fd7bae0681b62a39ddfc1c7fb19 LOVE hex:4c4f5645
+20392298d6b78e0890cd22a7bf071c49 PANGGI hex:50414e474749
+48a365b4ce1e322a55ae9017f3daf0c0 sysadmin hex:73797361646d696e
+c94630fe9dea660ba53ddf5d3a41e802 herc hex:68657263
+dcb76da384ae3028d6aa9b2ebcea01c9 sayang hex:736179616e67
+64e623a92934d8dda6483c1d79eaf782 abialif hex:616269616c6966
+3364424f412354213fff2014428feedd nashiena hex:6e61736869656e61
+73e405227c02a626e66f0dc4dd3a53a3 hayati hex:686179617469
+4e6f22ae428568be58e3ad806d4dd861 rahasiah hex:7261686173696168
+768cac6dd6bd6b898315f0c60777671c aku aman hex:616b7520616d616e
+2e19ab163556288cf239f5339927e408 nunung hex:6e756e756e67
+cc252896f2650ba8d133f51dbe37ed92 jika dia hex:6a696b6120646961
+91d9a5f5ffd7cf8955127ed6d5c39693 c4p3k hex:633470336b
+4f8843b8ca1775ae119e9e5b9a7fd7b8 ira1 hex:69726131
+cded7f1efca84195ebde9495134e3a3e 1234q hex:3132333471
+9486f7a4fdf724cf6cacbdc103661fce metty77 hex:6d657474793737
+26f803e714f7d39c0b5a9dd67d03f887 8u7y6t hex:387537793674
+0248750eb423b999bd684b10668f7241 iMoeTh hex:694d6f655468
+9ac17fc47347d505c92e3ca31fee675d 4Dm1n hex:34446d316e
+b65a81125dbfaab4a3ecdff26a979309 Pa55 hex:50613535
+3fde6bb0541387e4ebdadf7c2ff31123 1q2w3e hex:317132773365
+d695f8f703c1b3b0dce9d588a4d4abad UN1k0M hex:554e316b304d
+86acaeb6d0f7241ea54b73528fa204ca 5TR0n6 hex:355452306e36
+78c5d5ed7ea4372435e9f006b29ea745 !Q@W#E hex:215140572345
+75003783871e9404cd0793ca81594841 G0D$ hex:47304424
+e63d33d7ad4b4360f761634de070a860 w_Bu5H hex:775f42753548
+a9684b0defabebc108720fda1627f43d 1!q^YW hex:3121715e5957
+b150e73aa5fc110c27320c98effcc0f1 p@N66i hex:70404e363669
+464b59d944c93b6a5eb3dfd0abf15114 c(%H2n hex:63282548326e
+4e3d682f0821b23f6d49fa1ac2cf154a R@54In hex:52403534496e
+d740ee7f1cd46b3d536a6f4331a4c77f *$^#&amp;3 hex:2a245e232633
+13781c244d5bb85a296bcbe4ac7992f7 h@xX0r hex:684078583072
+d81bf97286c617c77b679478ce8b72b2 050479 hex:303530343739
+bcdc908a16dbfe1297b4b0891ccf9ed7 29041987 hex:3239303431393837</pre></div>
+</div>]]></content:encoded>
+	<excerpt:encoded><![CDATA[rcrack ../md5_tables/*.rt -l hash_baru.txt md5_alpha-numeric#1-7_0_2400x40000000_panggi#000.rt: 488329216 bytes read, disk access time: 102.84 s verifying the file… searching for 40 hashes… plaintext of 3b11cefd11fc6649d26815b5fe3b34f1 is P45T1 pl...]]></excerpt:encoded>	
+
+	<wp:post_date>Sat Jul 17 05:39:00 -0700 2010</wp:post_date>
+	<wp:post_date_gmt>Sat Jul 17 05:39:00 -0700 2010</wp:post_date_gmt>
+	<wp:comment_status>open</wp:comment_status>
+	<wp:ping_status>open</wp:ping_status>
+	<wp:post_id>23252642</wp:post_id>
+	<wp:post_name>crack-result-example-when-using-rcrack-rainbo</wp:post_name>
+	<wp:status>publish</wp:status>
+	<wp:post_parent>0</wp:post_parent>
+	<wp:menu_order>0</wp:menu_order>
+	<wp:post_type>post</wp:post_type>
+	<wp:post_password></wp:post_password>
+	<wp:is_sticky>0</wp:is_sticky>
+
+	
+</item>

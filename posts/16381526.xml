@@ -1,0 +1,133 @@
+<item>
+	<title>Play with twitter API and post &quot;via your application&quot; without have to code anything</title>
+	<link>http://www.opensecuritylab.org/play-with-twitter-api-and-post-via-your-appli</link>
+	<pubDate>Thu Apr 15 05:20:00 -0700 2010</pubDate>
+	
+	<dc:creator><![CDATA[Panggi Libersa Jasri Akadol]]></dc:creator>
+	
+	
+		<category domain="tag" nicename="Geo+Location"><![CDATA[Geo Location]]></category>
+	
+		<category domain="tag" nicename="OAuth"><![CDATA[OAuth]]></category>
+	
+		<category domain="tag" nicename="Programming"><![CDATA[Programming]]></category>
+	
+		<category domain="tag" nicename="RESTful"><![CDATA[RESTful]]></category>
+	
+		<category domain="tag" nicename="Twitter"><![CDATA[Twitter]]></category>
+	
+		<category domain="tag" nicename="Web+Development"><![CDATA[Web Development]]></category>
+	
+
+	<category><![CDATA[Uncategorized]]></category>
+
+	<category domain="category" nicename="uncategorized"><![CDATA[Uncategorized]]></category>
+
+  <guid isPermaLink="false">http://www.opensecuritylab.org/play-with-twitter-api-and-post-via-your-appli</guid>
+	<description></description>
+	<content:encoded><![CDATA[<p><img src="http://upload.wikimedia.org/wikipedia/commons/5/51/Twitter_logo.svg" alt="" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>If you are a twitter user , then you should familiar about twitter apps . With the Open API , developers can make their application with customized application name such as : "<strong>Tweetdeck</strong>" , "<strong>Snaptu</strong>" , "<strong>Seesmic</strong>" ,"<strong>UberTwitter</strong>" etc. For some cases , yes we have to code *hard code* to communicate with twitter via our application to make it easier to do many task that twitter can do. But , i just found an easy and fun way to do those "communication" things. </p>
+<p><strong>Steps :</strong></p>
+<ol>
+<li>Make an application for your twitter here : <a href="http://twitter.com/apps/new">http://twitter.com/apps/new</a> </li>
+<li>Go to here <a href="http://dev.twitter.com/console">http://dev.twitter.com/console</a> , this is your playground </li>
+<li>Read API documentation here at <a href="http://apiwiki.twitter.com">http://apiwiki.twitter.com</a> </li>
+<li>Get some fun</li>
+</ol>
+<div><strong>Example : </strong></div>
+<div> </div>
+<div>We will post a status update with Geo Location information attached and also a reply to friend's status <div class='p_embed p_image_embed'>
+<a href="http://getfile3.posterous.com/getfile/files.posterous.com/temp-2010-05-05/yJpqCfIwmsFbsDuxBwHoEcbpydlmlCyfDftbmFvzoGbsiICFfvhHgwhkahcd/scrshoot5.jpg"><img alt="Scrshoot5" src="http://getfile3.posterous.com/getfile/files.posterous.com/temp-2010-05-05/yJpqCfIwmsFbsDuxBwHoEcbpydlmlCyfDftbmFvzoGbsiICFfvhHgwhkahcd/scrshoot5.jpg" /></a>
+<a href="http://getfile6.posterous.com/getfile/files.posterous.com/temp-2010-05-05/saskDiuyfgalGldakeqJaFFfGaIBmGdcwikDnapBGcjBIEkqfgaoixjjutaC/scrshoot3.jpg"><img alt="Scrshoot3" src="http://getfile6.posterous.com/getfile/files.posterous.com/temp-2010-05-05/saskDiuyfgalGldakeqJaFFfGaIBmGdcwikDnapBGcjBIEkqfgaoixjjutaC/scrshoot3.jpg" /></a>
+<a href="http://getfile0.posterous.com/getfile/files.posterous.com/temp-2010-05-05/nxervGDvBoDfgpmkGHxFoAGHIagrpAzxwoDElonoHsHJslobJpzoGJjqBggC/scrshoot4.jpg"><img alt="Scrshoot4" src="http://getfile0.posterous.com/getfile/files.posterous.com/temp-2010-05-05/nxervGDvBoDfgpmkGHxFoAGHIagrpAzxwoDElonoHsHJslobJpzoGJjqBggC/scrshoot4.jpg" /></a>
+</div>
+ <!--more-->
+</div>
+<div> </div>
+<div>1. Login to <a href="http://twitter.com">http://twitter.com</a>
+</div>
+<div>2. go to <a href="http://dev.twitter.com/console">http://dev.twitter.com/console</a>
+</div>
+<div>3. choose statuses/update and POST ( see the <a href="http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-statuses%C2%A0update">documentation</a> )</div>
+<div>4. in the API documentation we know that there are 6 parameters that can be used in statuses/update :</div>
+<div>
+<div>
+<blockquote>
+<ul>
+<li> <span style="font-family: courier new, monospace;">status</span>.  Required.  The text of your status update. URL encode as necessary. Statuses over <a href="http://apiwiki.twitter.com/Counting-Characters">140 characters</a> will cause a 403 error to be returned from the API.  Statuses have the same text as a recently posted status from the same user will also cause a 403 error to be returned from the API.  When a 403 is returned due to shortened text or duplicate statuses, the response body will contain details on why the tweet was rejected.</li>
+<li> <span style="font-family: courier new,monospace;">in_reply_to_status_id</span>.  Optional. The ID of an existing status that the update is in reply to.                         
+<ul>
+<li>Note: This parameter will be ignored unless the author of the tweet this parameter references is mentioned within the status text. Therefore, you must include <span style="font-family: Courier New;">@username</span>, where <span style="font-family: Courier New;">username</span> is the author of the referenced tweet, within the update.</li>
+</ul>
+</li>
+<li> <span style="font-family: Courier New;">lat. </span>Optional. The location's latitude that this tweet refers to.  The valid ranges for latitude is -90.0 to +90.0 (North is positive) inclusive.  This parameter will be ignored if outside that range, if it is not a number, if <span style="font-family: Courier New;">geo_enabled</span> is disabled, or if there not a corresponding <span style="font-family: Courier New;">long</span> parameter with this tweet.</li>
+<li> <span style="font-family: Courier New;">long.</span>  Optional. The location's longitude that this tweet refers to.  The valid ranges for longitude is -180.0 to +180.0 (East is positive) inclusive.  This parameter will be ignored if outside that range, if it is not a number, if <span style="font-family: Courier New;">geo_enabled</span> is disabled, or if there not a corresponding <span style="font-family: Courier New;">lat</span> parameter with this tweet.</li>
+<li> <span style="font-family: Courier New;">place_id</span>.  Optional. The place to attach to this status update.  Valid <span style="font-family: Courier New;">place_id</span>s can be found by querying <a href="http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-GET-geo-reverse_geocode">geo/reverse_geocode</a>.</li>
+<li> <span style="font-family: Courier New;">display_coordinates</span>. Optional. By default, geo-tweets will have their coordinates exposed in the status object (to remain backwards compatible with existing API applications).  To turn off the display of the precise latitude and longitude (but keep the contextual location information), pass <span style="font-family: Courier New;">display_coordinates=false</span> on the status update.</li>
+</ul>
+</blockquote>
+<div>status parameter is Required and others are Optional </div>
+</div>
+<div> </div>
+<div>5. insert the parameter(s) you want ( for lat and long , you hav<span style="font-size: small;">e to activate the "</span><span style="color: #333333; line-height: 24px;"><span style="font-size: small;">Add a location to your tweets" in your twitter setting page</span></span><span style="font-family: Lucida Grande, sans-serif; color: #333333; line-height: 24px;"> ) </span><span style="color: #333333; line-height: 24px; font-size: small;">and choose wich application name you wanna use.</span>
+</div>
+<div><span style="font-family: Lucida Grande, sans-serif; color: #333333; line-height: 24px;">6 . Click "Send" , and see what happen.</span></div>
+</div>]]></content:encoded>
+	<excerpt:encoded><![CDATA[If you are a twitter user , then you should familiar about twitter apps . With the Open API , developers can make their application with customized application name such as : "Tweetdeck" , "Snaptu" , "Seesmic" ,"UberTwitter" etc. For some cases , ...]]></excerpt:encoded>	
+
+	<wp:post_date>Thu Apr 15 05:20:00 -0700 2010</wp:post_date>
+	<wp:post_date_gmt>Thu Apr 15 05:20:00 -0700 2010</wp:post_date_gmt>
+	<wp:comment_status>open</wp:comment_status>
+	<wp:ping_status>open</wp:ping_status>
+	<wp:post_id>16381526</wp:post_id>
+	<wp:post_name>play-with-twitter-api-and-post-via-your-appli</wp:post_name>
+	<wp:status>publish</wp:status>
+	<wp:post_parent>0</wp:post_parent>
+	<wp:menu_order>0</wp:menu_order>
+	<wp:post_type>post</wp:post_type>
+	<wp:post_password></wp:post_password>
+	<wp:is_sticky>0</wp:is_sticky>
+
+	
+		<wp:comment>
+			<wp:comment_id>2397296</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[arifrahmanh]]></wp:comment_author>
+				<wp:comment_author_url><![CDATA[http://twitter.com/arifrahmanh]]></wp:comment_author_url>
+			
+			<wp:comment_date>Sat Apr 24 07:41:09 -0700 2010</wp:comment_date>
+			<wp:comment_date_gmt>Sat Apr 24 07:41:09 -0700 2010</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[How to choose POST? (o_O) Currently GET is the only choice.]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+		<wp:comment>
+			<wp:comment_id>2432156</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[Panggi Libersa Jasri Akadol]]></wp:comment_author>
+			
+			<wp:comment_date>Wed May 05 18:34:11 -0700 2010</wp:comment_date>
+			<wp:comment_date_gmt>Wed May 05 18:34:11 -0700 2010</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[we have to see the API we use .. GET is used like in statuses/show .. that the operation is only to get the data from twitter .. but POST is used like in statuses/update .. you can change the APIs options.. sorry for the late answer :-)]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+		<wp:comment>
+			<wp:comment_id>5939887</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[manggamuda]]></wp:comment_author>
+				<wp:comment_author_url><![CDATA[]]></wp:comment_author_url>
+			
+			<wp:comment_date>Sun Oct 31 14:18:19 -0700 2010</wp:comment_date>
+			<wp:comment_date_gmt>Sun Oct 31 14:18:19 -0700 2010</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[it didn't work. i chose the statuses/update but i couldn't get the POST option. O_o ]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+</item>

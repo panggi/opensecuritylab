@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<link href='../../../exports.css' rel='stylesheet'>
+<link href='../../../exports.css' rel='stylesheet'>
+
+</head>
+<body>
+<div id='wrap'>
+<div id='header'>
+<h1>Open Security Laboratory</h1>
+<h2>This is an archived post
+This is an archived post
+</h2>
+</div>
+<div id='content'><div id='nav'>
+<a href="../../../posts/2010/07/ten-twitter-api-tips.html">Previous</a>
+&nbsp; 
+<a href="../../../index-3.html">Index</a>
+&nbsp; 
+<a href="../../../posts/2010/07/viruses-dont-harm-ignorance-does-vx-heavens.html">Next</a>
+</div>
+<div class='post'>
+<div class='post_header'>
+<h3>What's new on OAuth 2.0 ?</h3>
+<div class='post_info'>
+<span class='post_time'>July 26 2010,  7:23 PM</span>
+<span class='author'>&nbsp;by Panggi Libersa Jasri Akadol</span>
+</div>
+</div>
+<div class='post_body'><p><span style="font-size: 12px; color: #696969; line-height: 19px;">
+<p><div class='p_embed p_image_embed'>
+<img src='../../../image/2010/07/12697377-OAuth-at-the-DMV.png'>
+</div>
+</p>
+<p style="text-align: left;"><strong>OAuth 2.0 is a completely new protocol</strong> and is not backwards compatible with previous versions. However, it retains the overall architecture and approach established by the previous versions, and the same introduction (from the Official Guide to OAuth 1.0) still very much applies.</p>
+<p>The following is a subset of the new features available in OAuth 2.0:</p>
+<h4 style="">6 New Flows</h4>
+<ul>
+<li>
+<strong>User-Agent Flow</strong> – for clients running inside a user-agent (typically a web browser).</li>
+<li>
+<strong>Web Server Flow</strong> – for clients that are part of a web server application, accessible via HTTP requests. This is a simpler version of the flow provided by OAuth 1.0.</li>
+<li>
+<strong>Device Flow</strong> – suitable for clients executing on limited devices, but where the end-user has separate access to a browser on another computer or device.</li>
+<li>
+<strong>Username and Password Flow</strong> – used in cases where the user trusts the client to handle its credentials but it is still undesirable for the client to store the user’s username and password.  This flow is only suitable when there is a high degree of trust between the user and the client.</li>
+<li>
+<strong>Client Credentials Flow</strong> – the client uses its credentials to obtain an access token. This flow supports what is known as the 2-legged scenario.</li>
+<li>
+<strong>Assertion Flow</strong> – the client presents an assertion such as a SAML assertion to the authorization server in exchange for an access token.</li>
+</ul>
+<p>Native application support (applications running on a desktop or mobile device) can be implemented using many of the flows above.</p>
+<h4 style="">Bearer tokens</h4>
+<p>OAuth 2.0 provides a cryptography-free option for authentication which is based on existing cookie authentication architecture. Instead of sending signed requests using HMAC and token secrets, the token itself is used as a secret sent over HTTPS. This allows making API calls using cURL and other simple scripting tools without having to canonicalize the request and sign it.</p>
+<h4 style="">Simplified signatures</h4>
+<p>Signature support has been significantly simplified to remove the need for special parsing, encoding, and sorting of parameters. It also uses a single secret instead of two.</p>
+<h4 style="">Short-lived tokens with Long-lived authorizations</h4>
+<p>Instead of issuing a long lasting token (typically good for a year or unlimited lifetime), the server can issues a short-lived access token and a long lived refresh token. This allows clienta to obtain a new access token without having to involve the user again, but keeps access tokens limited. This feature was adopted from Yahoo!’s BBAuth protocol and later its OAuth 1.0 Session Extension.</p>
+<h4 style="">Separation of Roles</h4>
+<p>OAuth 2.0 separates the role of the authorization server responsible for obtaining user authorization and issuing tokens from that of the resource server handling API calls.</p>
+<p>Latest draft can be viewed here : <a href="http://tools.ietf.org/html/draft-ietf-oauth-v2-10">http://tools.ietf.org/html/draft-ietf-oauth-v2-10</a></p>
+<p>via <a href="http://hueniverse.com/2010/05/introducing-oauth-2-0/" target="_blank">hueniverse</a></p>
+</span></p></div>
+<div class='post_tags'>
+<h4>Tags</h4>
+<div class='post_tags_list'>cloudcomputing, cryptography, oauth, restful, security, webdevelopment</div>
+</div>
+<div class='post_responses'>
+<h4>1161 views and 0 responses</h4>
+<ul class='post_responses list'>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<item>
+	<title>USB Autorun Attacks Against GNU/Linux OS</title>
+	<link>http://www.opensecuritylab.org/usb-autorun-attacks-against-gnulinux-os</link>
+	<pubDate>Mon Feb 07 11:18:00 -0800 2011</pubDate>
+	
+	<dc:creator><![CDATA[Panggi Libersa Jasri Akadol]]></dc:creator>
+	
+	
+		<category domain="tag" nicename="Events"><![CDATA[Events]]></category>
+	
+		<category domain="tag" nicename="GNU%2FLinux"><![CDATA[GNU/Linux]]></category>
+	
+		<category domain="tag" nicename="Malware"><![CDATA[Malware]]></category>
+	
+		<category domain="tag" nicename="Shmoocon"><![CDATA[Shmoocon]]></category>
+	
+		<category domain="tag" nicename="USB"><![CDATA[USB]]></category>
+	
+
+	<category><![CDATA[Uncategorized]]></category>
+
+	<category domain="category" nicename="uncategorized"><![CDATA[Uncategorized]]></category>
+
+  <guid isPermaLink="false">http://www.opensecuritylab.org/usb-autorun-attacks-against-gnulinux-os</guid>
+	<description></description>
+	<content:encoded><![CDATA[<p><iframe src="http://www.youtube.com/embed/ovfYBa1EHm4?rel=0" frameborder="0" height="390" width="480"></iframe></p>
+<p>So , even you use GNU/Linux , it doesn't mean that you don't have to care about malicious code . Enjoy the show :)</p>
+<blockquote class="posterous_medium_quote">
+<p>This Shmoocon presentation by Jon Larimer from IBM X-Force starts off  with a definition of autorun vulnerabilities and some examples from  Windows, then jumps straight into the Linux side of things.<p />  Larimer explains how attackers can abuse these features to gain access  to a live system by using a USB flash drive. He also shows how USB as an  exploitation platform can allow for easy bypass of protection  mechanisms like ASLR and how these attacks can provide a level of access  that other physical attack methods do not.</p>
+</blockquote>
+<p>via <a href="http://www.net-security.org/secworld.php?id=10544" target="_blank">net-security</a></p>]]></content:encoded>
+	<excerpt:encoded><![CDATA[So , even you use GNU/Linux , it doesn't mean that you don't have to care about malicious code . Enjoy the show :) This Shmoocon presentation by Jon Larimer from IBM X-Force starts off with a definition of autorun vulnerabilities and some examples...]]></excerpt:encoded>	
+
+	<wp:post_date>Mon Feb 07 11:18:00 -0800 2011</wp:post_date>
+	<wp:post_date_gmt>Mon Feb 07 11:18:00 -0800 2011</wp:post_date_gmt>
+	<wp:comment_status>open</wp:comment_status>
+	<wp:ping_status>open</wp:ping_status>
+	<wp:post_id>42299777</wp:post_id>
+	<wp:post_name>usb-autorun-attacks-against-gnulinux-os</wp:post_name>
+	<wp:status>publish</wp:status>
+	<wp:post_parent>0</wp:post_parent>
+	<wp:menu_order>0</wp:menu_order>
+	<wp:post_type>post</wp:post_type>
+	<wp:post_password></wp:post_password>
+	<wp:is_sticky>0</wp:is_sticky>
+
+	
+</item>

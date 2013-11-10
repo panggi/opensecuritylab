@@ -1,0 +1,219 @@
+<item>
+	<title>AnonOps' / Operation Payback's tools ( LOIC - Low Orbit Ion Cannon)</title>
+	<link>http://www.opensecuritylab.org/anonops-operation-paybacks-tools-loic-low-orb</link>
+	<pubDate>Thu Dec 09 17:35:00 -0800 2010</pubDate>
+	
+	<dc:creator><![CDATA[Panggi Libersa Jasri Akadol]]></dc:creator>
+	
+	
+		<category domain="tag" nicename="Security"><![CDATA[Security]]></category>
+	
+
+	<category><![CDATA[Uncategorized]]></category>
+
+	<category domain="category" nicename="uncategorized"><![CDATA[Uncategorized]]></category>
+
+  <guid isPermaLink="false">http://www.opensecuritylab.org/anonops-operation-paybacks-tools-loic-low-orb</guid>
+	<description></description>
+	<content:encoded><![CDATA[<p><div class='p_embed p_image_embed'>
+<a href="http://getfile6.posterous.com/getfile/files.posterous.com/temp-2010-12-09/fzdnbfiarzgzrdnirgqamncFovbifaekDdCDsanbIjpDsHDlIsmEttmrromh/payback.png"><img alt="Payback" src="http://getfile6.posterous.com/getfile/files.posterous.com/temp-2010-12-09/fzdnbfiarzgzrdnirgqamncFovbifaekDdCDsanbIjpDsHDlIsmEttmrromh/payback.png" /></a>
+</div>
+<strong>This Information is for Knowledge purpose only !</strong></p>
+<p>From their twitter account at <a href="http://twitter.com/Op_Payback/">http://twitter.com/Op_Payback/</a> , i can summarize some of their resources :</p>
+<p>Their official instruction is written in : <a href="http://pastehtml.com/view/1c8i33u.html">http://pastehtml.com/view/1c8i33u.html</a></p>
+<p>The malware warning will be shown if you open that address , click "I understand the risk . View the page" if you want to see it.</p>
+<p>This is the content of the instruction :<!--more--></p>
+<blockquote>
+<p>The  host for AnonOps.net shut us down and told us to <em>"prove we used legal money"</em>. <strong>Bring the PAIN!</strong></p>
+<p>This page has been marked as <em>"containing malware"</em>. We all know that is BULLSHIT. Mail the host and tell him to remove it! (PS. Ask nicely) <a href="http://pastehtml.com/view/maksims@sadovskis.com">maksims@sadovskis.com</a></p>
+</blockquote>
+<blockquote><span style="color: #cc0000;"> </span>
+<h1>IRC.ANONOPS-IRC.COM</h1>
+<p><strong>Do not trust any other download links than those on this page! They might log your IP or infect you, etc.</strong></p>
+<h2><a href="http://www.anonops.info/">www.AnonOps.info</a></h2>
+<h1 style="text-align: left;">LOIC SETUP GUIDE</h1>
+<p style="text-align: left;">HIVEMIND mode will connect your client to an IRC server so it can be controlled   remotely. Think of it like a voluntary botnet. They might even make your client do naughty things, so beware.</p>
+<p style="text-align: left;"><strong>Note:</strong> It does NOT allow remote administration of your machine, or anything like that, it is just control of LOIC itself.</p>
+<h2 style="text-align: left;"><br /> Windows</h2>
+<p style="text-align: left;"><strong>XP users</strong> MUST get the <a href="http://half-open.com/download_en.htm" target="_blank">Half-Open connections fix</a> first.</p>
+<ol style="text-align: left;">
+<li><a href="http://www.microsoft.com/downloads/en/details.aspx?FamilyID=ab99342f-5d1a-413d-8319-81da479ab0d7&amp;displaylang=en" target="_blank">Download MS .NET Framework 3.5</a> or <a href="http://www.microsoft.com/downloads/en/details.aspx?FamilyID=9cfb2d51-5ff4-4491-b0e5-b386f32c0992&amp;displaylang=en" target="_blank">4.0</a> and install it.</li>
+<li><a href="https://github.com/downloads/NewEraCracker/LOIC/loic.1.1.1.14.zip">Download Hivemind LOIC</a> and unzip it to your desktop.</li>
+<li>Start LOIC with the LOIC.EXE</li>
+<li><strong>Server: </strong>irc.AnonOps-IRC.com</li>
+<li><strong>Channel:</strong> #loic</li>
+<li>Select "hivemind mode"</li>
+<li>Sit back and watch the show</li>
+</ol> 
+<ul style="text-align: left;">
+<li><strong>If LOIC can't connect</strong> HiveMind, set it manual and enter the target <em>URL</em> and click <em>LOCK ON</em>, change settings to <em>TCP</em> and START FIRIN' LAZERS!</li>
+</ul>
+<h2 style="text-align: left;"><br /> MAC/Linux</h2>
+<p style="text-align: left;"><strong>JavaLOIC for MAC </strong>(no hivemind feature)<strong>:</strong> <a href="http://www.mediafire.com/?v71xomi7aogto92" target="_blank">Download</a></p>
+<ul style="text-align: left;">
+<li>Launch JavaLOIC</li>
+<li>Enter Target <em>URL</em> or <em>IP</em> and click <em>LOCK ON</em></li>
+<li>FIRE LAZERS</li>
+<li>join #setup on IRC for target info and settings (TCP and rest on defualt is usually best)</li>
+</ul>
+<strong><br /> With HiveMind feature (Mono or Wine):</strong> 
+<ul style="text-align: left;">
+<li><a href="https://github.com/NewEraCracker/LOIC/wiki/How-to-run-LOIC-using-Mono" target="_blank">Mono Guide</a></li>
+<li><a href="https://github.com/NewEraCracker/LOIC/wiki/How-to-run-LOIC-using-Wine" target="_blank">Wine Guide</a></li>
+</ul>
+<p style="text-align: left;"><strong><br /> Install script for Debian/Ubuntu/Fedora:</strong> <a href="http://pastebin.com/pMw4zE2z" target="_blank">View<br /> </a> Run the script from terminal.</p>
+<p style="text-align: left;">&nbsp;</p>
+<p style="text-align: left;"><strong>Settings:</strong></p>
+<ul style="text-align: left;">
+<li><strong> Server: </strong>irc.AnonOps-IRC.com</li>
+<li><strong>Channel:</strong> #loic</li>
+<li>Select "hivemind mode"</li>
+<li>Sit back and watch the show</li>
+</ul>
+<p style="text-align: left;">&nbsp;</p>
+<p style="text-align: left;"><strong>Go through the above steps 2-3 times</strong> if you can't get it working.<strong><br /> If you still can't fix it; </strong>Join <em>#Setup</em> for Win/Nix or <em>#nubbintank</em> for MACs, and ask.</p>
+<p style="text-align: left;">Guide to get on IRC to the right side -------&gt;</p>
+<h1 style="text-align: left;">FAQ</h1>
+<ul style="text-align: left;">
+<li><strong><span style="color: #cc0000;">Is LOIC infected with a virus?</span></strong> <strong>NO</strong>, your AV gives a <a href="http://service1.symantec.com/sarc/sarc.nsf/info/html/what.false.positive.html" target="_blank">false positive</a>. Disable your AV. The source code is included in the download to prove this.</li>
+<li><strong><span style="color: #cc0000;">Will I get caught/arrested for using it?</span> Chances are next to zero.</strong> Just blame you have a virus, or simply deny any knowledge of it.</li>
+<li><strong>Can I use a PROXY? NO</strong>, you will just attack the proxy. But a VPN is OK.</li>
+<li><strong>LOIC cant connect;</strong> Turn off <a href="http://lmgtfy.com/?q=mse" target="_blank">MSE</a> or your Firewall. <strong>Still no go;</strong> On IRC, type <em>/map</em> and choose a different server.</li>
+<li><strong>Requests stuck?</strong> Target is down, <em>KEEP FIRING TO KEEP IT DOWN</em></li>
+<li><strong>Who/What is the target; </strong> Set LOIC on <em>HIVEMIND</em> mode or join #setup on IRC and ask.</li>
+<li><strong>What settings should I use?</strong> Join the HIVEMIND or leave it at default w/ TCP. <strong>Protip:</strong> Dont go over 100 threads.</li>
+</ul>
+<p style="text-align: left;">&nbsp;</p>
+<ul style="text-align: left;">
+<li><strong>What is <a href="http://encyclopediadramatica.com/Ddos" target="_blank">(D)DOS</a>?</strong></li>
+<li><strong>What is a <a href="http://encyclopediadramatica.com/Botnet" target="_blank">botnet</a>?</strong></li>
+<li><strong>How do I get a botnet?</strong> No.</li>
+</ul>
+<h1 style="text-align: left;"><a href="http://www.irchelp.org/irchelp/search_engine.cgi">IRC FAQ</a></h1>
+<h2 style="text-align: left;"><strong>Rules:</strong></h2>
+<ul style="text-align: left;">
+<li><strong>DO NOT PM OPs!</strong> We have enough shit happening already.</li>
+<li><span style="color: #cc0000;"><strong>READ</strong></span> the <strong><span style="color: #cc0000;">TOPIC</span></strong> in the channels. <strong>Scroll up!!!</strong></li>
+<li><strong>Stay on topic!</strong> E.G dont ask for help in main chat, and dont talk about targets in #setup.</li>
+</ul>
+<p style="text-align: left;">Type <strong>/msg nickserv help</strong> to register to talk.<br /> See link above for any other questions.</p>
+<h2 style="text-align: left;"><strong> To get on IRC:</strong></h2>
+<p style="text-align: left;"><strong><span style="color: #cc0000;">GET THE ANONOPS MIRC CLIENT (windows) <a href="http://www.mediafire.com/?t6ca53y4y83o2ls" target="_blank">HERE</a> (updated).</span></strong> <br /> It will automatically connect you to IRC and join the channels. It also hides join/quits.</p>
+<ul style="text-align: left;">
+<li>Unzip it to your desktop </li>
+<li>Start with the mIRC shortcut</li>
+<li>Choose a name and click OK</li>
+<li>Click <img src="http://i.imgur.com/2bqfJ.png" height="16" alt="" width="16" /> to connect!</li>
+</ul>
+<p style="text-align: left;"><strong>Other Cients:</strong> Nix <a href="http://xchat.org/download/" target="_blank">xChat</a> / Mac <a href="http://colloquy.info/downloads/colloquy-latest.zip" target="_blank">colloquy</a></p>
+<ul style="text-align: left;">
+<li><strong>Server:</strong> irc.anonops-irc.com</li>
+<li><a href="irc://irc.anonops.net/operationpayback">Quick join link for CLIENTS</a></li>
+</ul>
+<p style="text-align: left;"><strong> Channel List</strong> (click to join w/ client or type /join #channel )<strong>:</strong></p>
+<ul style="text-align: left;">
+<li><a href="irc://irc.anonops.net/operationpayback">#OperationPayback</a> - main chat</li>
+<li><a href="irc://irc.anonops.net/setup">#setup</a> - LOIC help</li>
+<li><a href="irc://irc.anonops.net/nubbintank">#nubbintank</a> - MAC LOIC help</li>
+<li><a href="irc://irc.anonops.net/radiopayback">#RadioPayback</a> - official radio</li>
+<li><a href="irc://irc.anonops.net/recruit">#recruit</a> - help us get more people!</li>
+<li><a href="irc://irc.anonops.net/wikileaks">#WikiLeaks</a> - general wikileaks discussion</li>
+<li><a href="irc://irc.anonops.net/propaganda">#propaganda</a> - yes</li>
+<li><a href="irc://irc.anonops.net/target">#target</a> - target discussion</li>
+<li><a href="irc://irc.anonops.net/hispano">#hispano</a> - espa�ol</li>
+<li><a href="irc://irc.anonops.net/tpbfrance">#tpbfrance</a> - <span><span>fran�ais</span></span></li>
+<li><a href="irc://irc.anonops.net/tpbitaly">#tpbitaly</a> - <span><span>italiano</span></span></li>
+</ul>
+<p style="text-align: left;">&nbsp;</p>
+<p style="text-align: left;"><strong> See <a href="http://www.anonops.info/" target="_blank">www.anonops.info</a> for status on website and IRC servers.</strong></p>
+</blockquote>
+<p style="text-align: left;">This is the screenshot of <strong><a href="http://www.anonops.info">www.anonops.info</a></strong> that contains status of their website and IRC servers<strong><br /></strong></p>
+<p style="text-align: left;"><strong><div class='p_embed p_image_embed'>
+<a href="http://getfile0.posterous.com/getfile/files.posterous.com/temp-2010-12-09/xbhsgjmqlqHwDgkroqwlzgooHpBhBhFCHpJiIujopenyEdHbGDexIzrswbea/anonops-netstat.png"><img alt="Anonops-netstat" src="http://getfile0.posterous.com/getfile/files.posterous.com/temp-2010-12-09/xbhsgjmqlqHwDgkroqwlzgooHpBhBhFCHpJiIujopenyEdHbGDexIzrswbea/anonops-netstat.png" /></a>
+</div>
+</strong>To make their operation easier (<a href="http://en.wikipedia.org/wiki/Denial-of-service_attack" target="_blank">DDoS</a>) they have to make tool that people can trust and easy to use to help them, so they made a Javascript version of LOIC or <strong>"JS LOIC"</strong> that can be found here <a href="http://files.hl2forums.com/uploads/1e55b2e_JS_LOIC_v0_1.htm">http://files.hl2forums.com/uploads/1e55b2e_JS_LOIC_v0_1.htm</a></p>
+<p style="text-align: left;">You have to understand the way DDoS happens and then you'll know why they need many people to run their tools</p>
+<p style="text-align: left;"><strong><div class='p_embed p_image_embed'>
+<a href="http://getfile1.posterous.com/getfile/files.posterous.com/temp-2010-12-09/nCzsCDGlncgiwCrBzHvbaeldIHloCBeqpHwzqnakDtHuoavvFwkjxencDEnC/js-loic.png"><img alt="Js-loic" src="http://getfile1.posterous.com/getfile/files.posterous.com/temp-2010-12-09/nCzsCDGlncgiwCrBzHvbaeldIHloCBeqpHwzqnakDtHuoavvFwkjxencDEnC/js-loic.png" /></a>
+</div>
+</strong></p>
+<p style="text-align: left;">As you can see they're targetting the api.paypal.com or <a href="https://www.paypal.com:443/">https://www.paypal.com:443/</a></p>
+<p style="text-align: left;">This is the source code of the JS LOIC v0.1</p>
+<p style="text-align: left;"><div class='p_embed p_file_embed'>
+<a href="http://getfile1.posterous.com/getfile/files.posterous.com/temp-2010-12-09/wAAEkagpaaFIcpjGjCndocaBEqcstDltyxFGbFGmIoGdlIBrDhmpgcdhnBmD/js-loic.pdf"><div class='p_icon'></div>
+<div class='p_text'>js-loic.pdf</div>
+</a></div>
+Let see what will happen next ..</p>
+
+]]></content:encoded>
+	<excerpt:encoded><![CDATA[This Information is for Knowledge purpose only ! From their twitter account at http://twitter.com/Op_Payback/ , i can summarize some of their resources : Their official instruction is written in : http://pastehtml.com/view/1c8i33u.html The malware...]]></excerpt:encoded>	
+
+	<wp:post_date>Thu Dec 09 17:35:00 -0800 2010</wp:post_date>
+	<wp:post_date_gmt>Thu Dec 09 17:35:00 -0800 2010</wp:post_date_gmt>
+	<wp:comment_status>open</wp:comment_status>
+	<wp:ping_status>open</wp:ping_status>
+	<wp:post_id>35878285</wp:post_id>
+	<wp:post_name>anonops-operation-paybacks-tools-loic-low-orb</wp:post_name>
+	<wp:status>publish</wp:status>
+	<wp:post_parent>0</wp:post_parent>
+	<wp:menu_order>0</wp:menu_order>
+	<wp:post_type>post</wp:post_type>
+	<wp:post_password></wp:post_password>
+	<wp:is_sticky>0</wp:is_sticky>
+
+	
+		<wp:comment>
+			<wp:comment_id>10603792</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[Evan]]></wp:comment_author>
+				<wp:comment_author_url><![CDATA[]]></wp:comment_author_url>
+			
+			<wp:comment_date>Thu Feb 23 03:27:02 -0800 2012</wp:comment_date>
+			<wp:comment_date_gmt>Thu Feb 23 03:27:02 -0800 2012</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Interesting... Fires off a flood of image requests using the current date as a unique attribute.
+
+I wonder if the site could use passive monitoring to detect such an attack, re-route all external image requests to a honeypot domain (for logging), and continue business as usual.  
+
+Assuming that not all of the voluntary attackers use a VPN, shouldn't it be possible to trace unique attackers by their unique MAC address?
+
+I guess, I always assumed that Anonymous was more sophisticated. This looks like the work of script kiddies who completely lack understanding of the lower level networking protocols.
+
+I'm not going to pretend to be an expert. I could see Apache or an equivalent thread-based server being crushed by the sheer weight of the redirects needed but couldn't an event-based server acting as the router handle such a load without breaching it's memory/resource limits?
+
+Note: I didn't download the desktop client source, just took a glance at the JS version.]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+		<wp:comment>
+			<wp:comment_id>11767616</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[Anonymous]]></wp:comment_author>
+				<wp:comment_author_url><![CDATA[]]></wp:comment_author_url>
+			
+			<wp:comment_date>Wed Jan 09 16:47:47 -0800 2013</wp:comment_date>
+			<wp:comment_date_gmt>Wed Jan 09 16:47:47 -0800 2013</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Some of us (including me) have never hacked before. Can someone make a page we can practice on, like a page where we can make sure were doing it right but not get in trouble?]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+		<wp:comment>
+			<wp:comment_id>11768177</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[Evan]]></wp:comment_author>
+				<wp:comment_author_url><![CDATA[]]></wp:comment_author_url>
+			
+			<wp:comment_date>Wed Jan 09 22:21:16 -0800 2013</wp:comment_date>
+			<wp:comment_date_gmt>Wed Jan 09 22:21:16 -0800 2013</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[I hate to break to you but if you use this and the receiving server is logging requests (they are) then it's not hard for them to trace the origin of the requests.
+
+If this is the best anon can cone up with then it's no surprise that people are getting caught.]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+</item>

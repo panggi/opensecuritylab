@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<link href='../../../exports.css' rel='stylesheet'>
+<link href='../../../exports.css' rel='stylesheet'>
+
+</head>
+<body>
+<div id='wrap'>
+<div id='header'>
+<h1>Open Security Laboratory</h1>
+<h2>This is an archived post
+This is an archived post
+</h2>
+</div>
+<div id='content'><div id='nav'>
+<a href="../../../posts/2012/08/create-an-ubuntu-1204-virtual-machine-using-s.html">Previous</a>
+&nbsp; 
+<a href="../../../index.html">Index</a>
+&nbsp; 
+<a href="../../../posts/2011/10/continuous-integration-combining-jenkins-rail.html">Next</a>
+</div>
+<div class='post'>
+<div class='post_header'>
+<h3>Load Balancing a http and https enabled site with Apache and Ubuntu</h3>
+<div class='post_info'>
+<span class='post_time'>October 19 2011,  3:29 AM</span>
+<span class='author'>&nbsp;by Panggi Libersa Jasri Akadol</span>
+</div>
+</div>
+<div class='post_body'><p>If you are a web developer and want to add SSL feature for the security reason, i bet that you will not set the SSL to all the pages on your website. Why? because it is SO SLOW!!</p>
+<p>By using SSL , it means that the traffic between the client and server is encrypted and causing the bigger data transfered than without one. So, many of the developers will apply the SSL feature on specific places that need protection such as settings and message feature and then switch back to http when it comes to the page that doesn't need to be protected.</p>
+<p>Everything looks nice and clean until you need to load balance your site because of the increasing of the traffic. Yes, load balance means you need more than one server. And if you manage more than one server , it means that you need to do something with your SSL certificate that you already have for one domain only. That's not the only problem, as we know some big guy out there like <a href="http://www.rackspace.com/cloud/cloud_hosting_products/loadbalancers/compare/" target="_blank">Rackspace</a> has Load Balancing as their service but it can not manage multiple ports ( 80 + 443 ) at once. So, what do you have to do?</p>
+<p>Lets make one! :)</p>
+<p>In this tutorial, i assume that you are already familiar with Linux Server.</p>
+<p>- Install Apache server</p>
+<script src="https://gist.github.com/1297964.js?file=install-apache.txt"></script>
+<p>- Enable modules needed</p>
+<script src="https://gist.github.com/1297973.js?file=modules-for-load-balancing-apache.txt"></script>
+<p>- Comment out the content of /etc/apache2/sites-available/default</p>
+<p>- Edit the /etc/apache2/httpd.conf</p>
+<script src="https://gist.github.com/1297982.js?file=httpd.conf"></script>
+<p>- Restart the Apache server and voila!</p></div>
+<div class='post_responses'>
+<h4>3698 views and 3 responses</h4>
+<ul class='post_responses list'>
+<li class='response clearfix'>
+<div class='response_header'>
+<div class='response_time'>Aug  7 2012, 11:25 PM</div>
+<div class='response_name'>diego responded:</div>
+</div>
+<div class='response_body'>Just what I need<br />Thanks,<br />Diego</div>
+</li>
+<li class='response clearfix'>
+<div class='response_header'>
+<div class='response_time'>Feb 14 2013,  8:55 AM</div>
+<div class='response_name'>AA responded:</div>
+</div>
+<div class='response_body'>Thanks for laying this out plainly, with helpful comments. And thanks for not trying to post some massive super-terrific solution all at once - very quick read! :)</div>
+</li>
+<li class='response clearfix'>
+<div class='response_header'>
+<div class='response_time'>Apr 13 2013,  6:25 PM</div>
+<div class='response_name'>Abdus Samad responded:</div>
+</div>
+<div class='response_body'>Hey thanks for the detailed info. I am using self signed certficate right now for testing purpose. In that case what should be the value of SSLCertificateFile /etc/apache2/ssl/apache.pem<br />        SSLCertificateKeyFile /etc/apache2/ssl/apache.key</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<link href='../../../exports.css' rel='stylesheet'>
+<link href='../../../exports.css' rel='stylesheet'>
+
+</head>
+<body>
+<div id='wrap'>
+<div id='header'>
+<h1>Open Security Laboratory</h1>
+<h2>This is an archived post
+This is an archived post
+</h2>
+</div>
+<div id='content'><div id='nav'>
+<a href="../../../posts/2010/05/rest-based-mobile-web-collaboration-learning.html">Previous</a>
+&nbsp; 
+<a href="../../../index-4.html">Index</a>
+&nbsp; 
+<a href="../../../posts/2010/04/making-a-local-ubuntu-910-repository-server.html">Next</a>
+</div>
+<div class='post'>
+<div class='post_header'>
+<h3>Play with twitter API and post "via your application" without have to code anything</h3>
+<div class='post_info'>
+<span class='post_time'>April 15 2010,  5:20 AM</span>
+<span class='author'>&nbsp;by Panggi Libersa Jasri Akadol</span>
+</div>
+</div>
+<div class='post_body'><p><img src="http://upload.wikimedia.org/wikipedia/commons/5/51/Twitter_logo.svg" alt="" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>If you are a twitter user , then you should familiar about twitter apps . With the Open API , developers can make their application with customized application name such as : "<strong>Tweetdeck</strong>" , "<strong>Snaptu</strong>" , "<strong>Seesmic</strong>" ,"<strong>UberTwitter</strong>" etc. For some cases , yes we have to code *hard code* to communicate with twitter via our application to make it easier to do many task that twitter can do. But , i just found an easy and fun way to do those "communication" things. </p>
+<p><strong>Steps :</strong></p>
+<ol>
+<li>Make an application for your twitter here : <a href="http://twitter.com/apps/new">http://twitter.com/apps/new</a> </li>
+<li>Go to here <a href="http://dev.twitter.com/console">http://dev.twitter.com/console</a> , this is your playground </li>
+<li>Read API documentation here at <a href="http://apiwiki.twitter.com">http://apiwiki.twitter.com</a> </li>
+<li>Get some fun</li>
+</ol>
+<div><strong>Example : </strong></div>
+<div> </div>
+<div>We will post a status update with Geo Location information attached and also a reply to friend's status <div class='p_embed p_image_embed'>
+<img src='../../../image/2010/05/8701578-scrshoot5.jpg'>
+<img src='../../../image/2010/05/8701579-scrshoot3.jpg'>
+<img src='../../../image/2010/05/8701580-scrshoot4.jpg'>
+</div>
+ <!--more-->
+</div>
+<div> </div>
+<div>1. Login to <a href="http://twitter.com">http://twitter.com</a>
+</div>
+<div>2. go to <a href="http://dev.twitter.com/console">http://dev.twitter.com/console</a>
+</div>
+<div>3. choose statuses/update and POST ( see the <a href="http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-statuses%C2%A0update">documentation</a> )</div>
+<div>4. in the API documentation we know that there are 6 parameters that can be used in statuses/update :</div>
+<div>
+<div>
+<blockquote>
+<ul>
+<li> <span style="font-family: courier new, monospace;">status</span>.  Required.  The text of your status update. URL encode as necessary. Statuses over <a href="http://apiwiki.twitter.com/Counting-Characters">140 characters</a> will cause a 403 error to be returned from the API.  Statuses have the same text as a recently posted status from the same user will also cause a 403 error to be returned from the API.  When a 403 is returned due to shortened text or duplicate statuses, the response body will contain details on why the tweet was rejected.</li>
+<li> <span style="font-family: courier new,monospace;">in_reply_to_status_id</span>.  Optional. The ID of an existing status that the update is in reply to.                         
+<ul>
+<li>Note: This parameter will be ignored unless the author of the tweet this parameter references is mentioned within the status text. Therefore, you must include <span style="font-family: Courier New;">@username</span>, where <span style="font-family: Courier New;">username</span> is the author of the referenced tweet, within the update.</li>
+</ul>
+</li>
+<li> <span style="font-family: Courier New;">lat. </span>Optional. The location's latitude that this tweet refers to.  The valid ranges for latitude is -90.0 to +90.0 (North is positive) inclusive.  This parameter will be ignored if outside that range, if it is not a number, if <span style="font-family: Courier New;">geo_enabled</span> is disabled, or if there not a corresponding <span style="font-family: Courier New;">long</span> parameter with this tweet.</li>
+<li> <span style="font-family: Courier New;">long.</span>  Optional. The location's longitude that this tweet refers to.  The valid ranges for longitude is -180.0 to +180.0 (East is positive) inclusive.  This parameter will be ignored if outside that range, if it is not a number, if <span style="font-family: Courier New;">geo_enabled</span> is disabled, or if there not a corresponding <span style="font-family: Courier New;">lat</span> parameter with this tweet.</li>
+<li> <span style="font-family: Courier New;">place_id</span>.  Optional. The place to attach to this status update.  Valid <span style="font-family: Courier New;">place_id</span>s can be found by querying <a href="http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-GET-geo-reverse_geocode">geo/reverse_geocode</a>.</li>
+<li> <span style="font-family: Courier New;">display_coordinates</span>. Optional. By default, geo-tweets will have their coordinates exposed in the status object (to remain backwards compatible with existing API applications).  To turn off the display of the precise latitude and longitude (but keep the contextual location information), pass <span style="font-family: Courier New;">display_coordinates=false</span> on the status update.</li>
+</ul>
+</blockquote>
+<div>status parameter is Required and others are Optional </div>
+</div>
+<div> </div>
+<div>5. insert the parameter(s) you want ( for lat and long , you hav<span style="font-size: small;">e to activate the "</span><span style="color: #333333; line-height: 24px;"><span style="font-size: small;">Add a location to your tweets" in your twitter setting page</span></span><span style="font-family: Lucida Grande, sans-serif; color: #333333; line-height: 24px;"> ) </span><span style="color: #333333; line-height: 24px; font-size: small;">and choose wich application name you wanna use.</span>
+</div>
+<div><span style="font-family: Lucida Grande, sans-serif; color: #333333; line-height: 24px;">6 . Click "Send" , and see what happen.</span></div>
+</div></div>
+<div class='post_tags'>
+<h4>Tags</h4>
+<div class='post_tags_list'>geolocation, oauth, programming, restful, twitter, webdevelopment</div>
+</div>
+<div class='post_responses'>
+<h4>3107 views and 3 responses</h4>
+<ul class='post_responses list'>
+<li class='response clearfix'>
+<div class='response_header'>
+<div class='response_time'>Apr 24 2010,  7:41 AM</div>
+<div class='response_name'>arifrahmanh (Twitter) responded:</div>
+</div>
+<div class='response_body'>How to choose POST? (o_O) Currently GET is the only choice.</div>
+</li>
+<li class='response clearfix'>
+<div class='response_header'>
+<div class='response_time'>May  5 2010,  6:34 PM</div>
+<div class='response_name'>Panggi Libersa Jasri Akadol responded:</div>
+</div>
+<div class='response_body'>we have to see the API we use .. GET is used like in statuses/show .. that the operation is only to get the data from twitter .. but POST is used like in statuses/update .. you can change the APIs options.. sorry for the late answer :-)</div>
+</li>
+<li class='response clearfix'>
+<div class='response_header'>
+<div class='response_time'>Oct 31 2010,  2:18 PM</div>
+<div class='response_name'>manggamuda responded:</div>
+</div>
+<div class='response_body'>it didn't work. i chose the statuses/update but i couldn't get the POST option. O_o</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

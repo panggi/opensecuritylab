@@ -1,0 +1,71 @@
+<item>
+	<title>OAuth Consumer And Server Library For PHP</title>
+	<link>http://www.opensecuritylab.org/oauth-consumer-and-server-library-for-php</link>
+	<pubDate>Wed Jul 21 16:25:00 -0700 2010</pubDate>
+	
+	<dc:creator><![CDATA[Panggi Libersa Jasri Akadol]]></dc:creator>
+	
+	
+		<category domain="tag" nicename="Cloud+Computing"><![CDATA[Cloud Computing]]></category>
+	
+		<category domain="tag" nicename="Cryptography"><![CDATA[Cryptography]]></category>
+	
+		<category domain="tag" nicename="Google"><![CDATA[Google]]></category>
+	
+		<category domain="tag" nicename="Mobile"><![CDATA[Mobile]]></category>
+	
+		<category domain="tag" nicename="OAuth"><![CDATA[OAuth]]></category>
+	
+		<category domain="tag" nicename="Programming"><![CDATA[Programming]]></category>
+	
+		<category domain="tag" nicename="RESTful"><![CDATA[RESTful]]></category>
+	
+		<category domain="tag" nicename="Security"><![CDATA[Security]]></category>
+	
+
+	<category><![CDATA[Uncategorized]]></category>
+
+	<category domain="category" nicename="uncategorized"><![CDATA[Uncategorized]]></category>
+
+  <guid isPermaLink="false">http://www.opensecuritylab.org/oauth-consumer-and-server-library-for-php</guid>
+	<description></description>
+	<content:encoded><![CDATA[<p><div class='p_embed p_image_embed'>
+<a href="http://getfile0.posterous.com/getfile/files.posterous.com/temp-2010-07-21/rFctgqJDifmanmIpmnxgnjihGykeqpEkvJgdhlkqdpHglFAwozItxFDfiomt/My-Endpoints.png"><img alt="My-endpoints" src="http://getfile0.posterous.com/getfile/files.posterous.com/temp-2010-07-21/rFctgqJDifmanmIpmnxgnjihGykeqpEkvJgdhlkqdpHglFAwozItxFDfiomt/My-Endpoints.png" /></a>
+</div>
+</p>
+<p style="text-align: left;">A PHP library for OAuth consumers and servers.   Complete with an  extensible OAuth store, including a full working implementation of a  MySQL store.</p>
+<p>The library implements methods to:</p>
+<ul>
+<li>verify  incoming requests against the library </li>
+<li>sign outgoing requests,  with curl support for actually doing the request </li>
+<li>sign requests  with a body </li>
+<li>administrate consumer keys and tokens for multiple  users (server and consumer side) </li>
+<li>log incoming and outgoing  requests handled by the library (optionally in the database) </li>
+</ul>
+<h2><span style="font-size: large;"><a name="OAuth_Consumer_(client)_How_To">OAuth Consumer (client) How To</a></span></h2>
+<p><a href="http://code.google.com/p/oauth-php/wiki/ConsumerHowTo">ConsumerHowTo</a> describes the basic way to make an OAuth consumer.</p>
+<h2><span style="font-size: large;"><a name="OAuth_Server_(service_provider)_How_To">OAuth Server (service  provider) How To</a></span></h2>
+<p><a href="http://code.google.com/p/oauth-php/wiki/ServerHowTo">ServerHowTo</a> describes the basic way to make an OAuth enabled site (aka service  provider).</p>
+<p><span style="font-size: large;"><strong>Source Code</strong></span></p>
+<blockquote>
+<p><tt>svn checkout <strong><em>http</em></strong>://oauth-php.googlecode.com/svn/trunk/</tt></p>
+</blockquote>
+<p>via <a href="http://code.google.com/p/oauth-php" target="_blank">Google Code</a></p>
+<p> </p>]]></content:encoded>
+	<excerpt:encoded><![CDATA[A PHP library for OAuth consumers and servers. Complete with an extensible OAuth store, including a full working implementation of a MySQL store. The library implements methods to: verify incoming requests against the library sign outgoing request...]]></excerpt:encoded>	
+
+	<wp:post_date>Wed Jul 21 16:25:00 -0700 2010</wp:post_date>
+	<wp:post_date_gmt>Wed Jul 21 16:25:00 -0700 2010</wp:post_date_gmt>
+	<wp:comment_status>open</wp:comment_status>
+	<wp:ping_status>open</wp:ping_status>
+	<wp:post_id>23729060</wp:post_id>
+	<wp:post_name>oauth-consumer-and-server-library-for-php</wp:post_name>
+	<wp:status>publish</wp:status>
+	<wp:post_parent>0</wp:post_parent>
+	<wp:menu_order>0</wp:menu_order>
+	<wp:post_type>post</wp:post_type>
+	<wp:post_password></wp:post_password>
+	<wp:is_sticky>0</wp:is_sticky>
+
+	
+</item>

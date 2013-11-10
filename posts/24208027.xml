@@ -1,0 +1,78 @@
+<item>
+	<title>What's new on OAuth 2.0 ?</title>
+	<link>http://www.opensecuritylab.org/whats-new-on-oauth-20</link>
+	<pubDate>Mon Jul 26 19:23:00 -0700 2010</pubDate>
+	
+	<dc:creator><![CDATA[Panggi Libersa Jasri Akadol]]></dc:creator>
+	
+	
+		<category domain="tag" nicename="Cloud+Computing"><![CDATA[Cloud Computing]]></category>
+	
+		<category domain="tag" nicename="Cryptography"><![CDATA[Cryptography]]></category>
+	
+		<category domain="tag" nicename="OAuth"><![CDATA[OAuth]]></category>
+	
+		<category domain="tag" nicename="RESTful"><![CDATA[RESTful]]></category>
+	
+		<category domain="tag" nicename="Security"><![CDATA[Security]]></category>
+	
+		<category domain="tag" nicename="Web+Development"><![CDATA[Web Development]]></category>
+	
+
+	<category><![CDATA[Uncategorized]]></category>
+
+	<category domain="category" nicename="uncategorized"><![CDATA[Uncategorized]]></category>
+
+  <guid isPermaLink="false">http://www.opensecuritylab.org/whats-new-on-oauth-20</guid>
+	<description></description>
+	<content:encoded><![CDATA[<p><span style="font-size: 12px; color: #696969; line-height: 19px;">
+<p><div class='p_embed p_image_embed'>
+<a href="http://getfile4.posterous.com/getfile/files.posterous.com/temp-2010-07-26/iFcBjzcGjuDIgmzkgHCHjGbiDsmuqomtnhiudsrliiaJagnCplJBcBCdDFjj/OAuth-at-the-DMV.png"><img alt="Oauth-at-the-dmv" src="http://getfile4.posterous.com/getfile/files.posterous.com/temp-2010-07-26/iFcBjzcGjuDIgmzkgHCHjGbiDsmuqomtnhiudsrliiaJagnCplJBcBCdDFjj/OAuth-at-the-DMV.png" /></a>
+</div>
+</p>
+<p style="text-align: left;"><strong>OAuth 2.0 is a completely new protocol</strong> and is not backwards compatible with previous versions. However, it retains the overall architecture and approach established by the previous versions, and the same introduction (from the Official Guide to OAuth 1.0) still very much applies.</p>
+<p>The following is a subset of the new features available in OAuth 2.0:</p>
+<h4 style="">6 New Flows</h4>
+<ul>
+<li>
+<strong>User-Agent Flow</strong> – for clients running inside a user-agent (typically a web browser).</li>
+<li>
+<strong>Web Server Flow</strong> – for clients that are part of a web server application, accessible via HTTP requests. This is a simpler version of the flow provided by OAuth 1.0.</li>
+<li>
+<strong>Device Flow</strong> – suitable for clients executing on limited devices, but where the end-user has separate access to a browser on another computer or device.</li>
+<li>
+<strong>Username and Password Flow</strong> – used in cases where the user trusts the client to handle its credentials but it is still undesirable for the client to store the user’s username and password.  This flow is only suitable when there is a high degree of trust between the user and the client.</li>
+<li>
+<strong>Client Credentials Flow</strong> – the client uses its credentials to obtain an access token. This flow supports what is known as the 2-legged scenario.</li>
+<li>
+<strong>Assertion Flow</strong> – the client presents an assertion such as a SAML assertion to the authorization server in exchange for an access token.</li>
+</ul>
+<p>Native application support (applications running on a desktop or mobile device) can be implemented using many of the flows above.</p>
+<h4 style="">Bearer tokens</h4>
+<p>OAuth 2.0 provides a cryptography-free option for authentication which is based on existing cookie authentication architecture. Instead of sending signed requests using HMAC and token secrets, the token itself is used as a secret sent over HTTPS. This allows making API calls using cURL and other simple scripting tools without having to canonicalize the request and sign it.</p>
+<h4 style="">Simplified signatures</h4>
+<p>Signature support has been significantly simplified to remove the need for special parsing, encoding, and sorting of parameters. It also uses a single secret instead of two.</p>
+<h4 style="">Short-lived tokens with Long-lived authorizations</h4>
+<p>Instead of issuing a long lasting token (typically good for a year or unlimited lifetime), the server can issues a short-lived access token and a long lived refresh token. This allows clienta to obtain a new access token without having to involve the user again, but keeps access tokens limited. This feature was adopted from Yahoo!’s BBAuth protocol and later its OAuth 1.0 Session Extension.</p>
+<h4 style="">Separation of Roles</h4>
+<p>OAuth 2.0 separates the role of the authorization server responsible for obtaining user authorization and issuing tokens from that of the resource server handling API calls.</p>
+<p>Latest draft can be viewed here : <a href="http://tools.ietf.org/html/draft-ietf-oauth-v2-10">http://tools.ietf.org/html/draft-ietf-oauth-v2-10</a></p>
+<p>via <a href="http://hueniverse.com/2010/05/introducing-oauth-2-0/" target="_blank">hueniverse</a></p>
+</span></p>]]></content:encoded>
+	<excerpt:encoded><![CDATA[OAuth 2.0 is a completely new protocol and is not backwards compatible with previous versions. However, it retains the overall architecture and approach established by the previous versions, and the same introduction (from the Official Guide to OA...]]></excerpt:encoded>	
+
+	<wp:post_date>Mon Jul 26 19:23:00 -0700 2010</wp:post_date>
+	<wp:post_date_gmt>Mon Jul 26 19:23:00 -0700 2010</wp:post_date_gmt>
+	<wp:comment_status>open</wp:comment_status>
+	<wp:ping_status>open</wp:ping_status>
+	<wp:post_id>24208027</wp:post_id>
+	<wp:post_name>whats-new-on-oauth-20</wp:post_name>
+	<wp:status>publish</wp:status>
+	<wp:post_parent>0</wp:post_parent>
+	<wp:menu_order>0</wp:menu_order>
+	<wp:post_type>post</wp:post_type>
+	<wp:post_password></wp:post_password>
+	<wp:is_sticky>0</wp:is_sticky>
+
+	
+</item>

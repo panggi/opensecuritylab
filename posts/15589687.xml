@@ -1,0 +1,65 @@
+<item>
+	<title>Yahoo! mail API now in OAuth with full access!</title>
+	<link>http://www.opensecuritylab.org/yahoo-mail-api-now-in-oauth-with-full-access</link>
+	<pubDate>Tue Apr 06 19:22:00 -0700 2010</pubDate>
+	
+	<dc:creator><![CDATA[Panggi Libersa Jasri Akadol]]></dc:creator>
+	
+	
+		<category domain="tag" nicename="Cloud+Computing"><![CDATA[Cloud Computing]]></category>
+	
+		<category domain="tag" nicename="Cryptography"><![CDATA[Cryptography]]></category>
+	
+		<category domain="tag" nicename="OAuth"><![CDATA[OAuth]]></category>
+	
+		<category domain="tag" nicename="Programming"><![CDATA[Programming]]></category>
+	
+		<category domain="tag" nicename="RESTful"><![CDATA[RESTful]]></category>
+	
+		<category domain="tag" nicename="Security"><![CDATA[Security]]></category>
+	
+		<category domain="tag" nicename="Web+Development"><![CDATA[Web Development]]></category>
+	
+		<category domain="tag" nicename="Yahoo%21"><![CDATA[Yahoo!]]></category>
+	
+
+	<category><![CDATA[Uncategorized]]></category>
+
+	<category domain="category" nicename="uncategorized"><![CDATA[Uncategorized]]></category>
+
+  <guid isPermaLink="false">http://www.opensecuritylab.org/yahoo-mail-api-now-in-oauth-with-full-access</guid>
+	<description></description>
+	<content:encoded><![CDATA[
+<p><img src="http://news.stepforth.com/images/selogos/yahoo-logo.JPG" height="157" alt="yahoo" width="200" /><img src="http://l.yimg.com/a/i/ydn/icons/mail.gif" height="83" alt="mail" width="91" /> <img src="http://l.yimg.com/a/i/ydn/icons/oauth_1.gif" height="83" alt="OAuth" width="91" /></p>
+<p><span style="color: #000000;"><strong><a href="http://developer.yahoo.com/mail/" title="Yahoo! Mail API" target="_blank"></a></strong></span></p>
+<p><span style="color: #000000;"><strong><span style="font-weight: normal;"><strong><a href="http://developer.yahoo.com/mail/" title="Yahoo! Mail API" target="_blank">Yahoo! Mail API</a></strong></span> <span style="font-weight: normal;">is a full-featured interface to Yahoo! Mail. With it, we can build applications that display message summary information, parse message contents, manage folders, and even compose and send messages.And now it allow<span style="color: #000000;">s Read and Read+Write access to full message contents for any type of user with the power of </span><a href="http://oauth.net" title="OAuth" target="_blank"><strong>OAuth</strong></a><span style="color: #000000;"> that allows you to share your private resources stored on one site with another site without having to hand out your user name and password. OAuth is a simple, secure, and quick way to publish and access protected data (photos, videos, contact list). It's an open authorization model based primarily on existing standards that ensures secure credentials can be provisioned and verified by different software platforms. </span><span style="font-size: 13px; color: #666666; line-height: 19px;"><span style="color: #000000;">Yahoo! continue to support </span><a href="http://developer.yahoo.com/auth"><strong>Browser-Based Auth</strong></a><span style="color: #000000;"> for legacy developers, but its use is deprecated.</span></span></span></strong></span></p>
+<p><span style="color: #000000;"> Getting Started </span></p>
+<blockquote>
+<p><span style="color: #000000;">1. Sign up for an </span><a href="https://developer.apps.yahoo.com/dashboard/createKey.html" title="OAuth consumer key and secret" target="_blank">OAuth consumer key and secret</a><span style="color: #000000;">. Three different access scopes are available: Summary info (Read Only), Full messages (Read Only), and Full message (Read-Write).</span></p>
+<p><span style="color: #000000;">2. Grab a client library. Here are two for </span><a href="http://github.com/pgriess/PyCascade" title="Python" target="_blank">Python</a><span style="color: #000000;"> and </span><a href="http://github.com/michaelcurtis/ymailphp" title="PHP">PHP</a><span style="color: #000000;">. </span></p>
+<p><span style="color: #000000;">3. Start making calls! </span></p>
+</blockquote>
+<p><span style="color: #000000;"> References :</span></p>
+<ul>
+<li><a href="http://developer.yahoo.com/mail/docs/user_guide/GettingStarted.html" title="Yahoo! Mail API User Guide" target="_blank">Yahoo! Mail API User Guide</a></li>
+<li><a href="http://developer.yahoo.com/mail/docs/user_guide/mail_user_guide.pdf" title="Yahoo! Mail API User Guide in PDF Format" target="_blank">Yahoo! Mail API User Guide in PDF Format</a></li>
+<li><a href="http://developer.yahoo.com/oauth/" title="OAuth Authorization Model" target="_blank">OAuth Authorization Model</a></li>
+<li><a href="http://developer.yahoo.net/forum/index.php?showforum=89" target="_blank">Yahoo! Developer Network Discussion Forum</a></li>
+</ul>]]></content:encoded>
+	<excerpt:encoded><![CDATA[Yahoo! Mail API is a full-featured interface to Yahoo! Mail. With it, we can build applications that display message summary information, parse message contents, manage folders, and even compose and send messages.And now it allows Read and Read+Wr...]]></excerpt:encoded>	
+
+	<wp:post_date>Tue Apr 06 19:22:00 -0700 2010</wp:post_date>
+	<wp:post_date_gmt>Tue Apr 06 19:22:00 -0700 2010</wp:post_date_gmt>
+	<wp:comment_status>open</wp:comment_status>
+	<wp:ping_status>open</wp:ping_status>
+	<wp:post_id>15589687</wp:post_id>
+	<wp:post_name>yahoo-mail-api-now-in-oauth-with-full-access</wp:post_name>
+	<wp:status>publish</wp:status>
+	<wp:post_parent>0</wp:post_parent>
+	<wp:menu_order>0</wp:menu_order>
+	<wp:post_type>post</wp:post_type>
+	<wp:post_password></wp:post_password>
+	<wp:is_sticky>0</wp:is_sticky>
+
+	
+</item>

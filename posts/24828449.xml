@@ -1,0 +1,92 @@
+<item>
+	<title>IP Logger with SMS Reporting using Twitter OAuth Bot</title>
+	<link>http://www.opensecuritylab.org/ip-logger-with-sms-reporting-using-twitter-oa</link>
+	<pubDate>Mon Aug 02 19:20:00 -0700 2010</pubDate>
+	
+	<dc:creator><![CDATA[Panggi Libersa Jasri Akadol]]></dc:creator>
+	
+	
+		<category domain="tag" nicename="Geo+Location"><![CDATA[Geo Location]]></category>
+	
+		<category domain="tag" nicename="OAuth"><![CDATA[OAuth]]></category>
+	
+		<category domain="tag" nicename="Programming"><![CDATA[Programming]]></category>
+	
+		<category domain="tag" nicename="RESTful"><![CDATA[RESTful]]></category>
+	
+		<category domain="tag" nicename="Security"><![CDATA[Security]]></category>
+	
+		<category domain="tag" nicename="Twitter"><![CDATA[Twitter]]></category>
+	
+		<category domain="tag" nicename="Web+Development"><![CDATA[Web Development]]></category>
+	
+
+	<category><![CDATA[Uncategorized]]></category>
+
+	<category domain="category" nicename="uncategorized"><![CDATA[Uncategorized]]></category>
+
+  <guid isPermaLink="false">http://www.opensecuritylab.org/ip-logger-with-sms-reporting-using-twitter-oa</guid>
+	<description></description>
+	<content:encoded><![CDATA[<p><div class='p_embed p_image_embed'>
+<a href="http://getfile9.posterous.com/getfile/files.posterous.com/temp-2010-08-02/cJFztCltrtHhliHvsyEDftFoIyfonqlrlAxuFmqekqtGDykkkHdJwDhlChCg/iploc_front.png"><img alt="Iploc_front" src="http://getfile9.posterous.com/getfile/files.posterous.com/temp-2010-08-02/cJFztCltrtHhliHvsyEDftFoIyfonqlrlAxuFmqekqtGDykkkHdJwDhlChCg/iploc_front.png" /></a>
+</div>
+As seen on my previous post about <a href="http://www.opensecuritylab.org/making-geoip-based-ip-locator-with-maps-and-t" target="_blank">Making GeoIP - based IP locator with Maps and twitter post in PHP </a>, it can Detect the IP , Locate it , Show it on maps , and post it to twitter . But now , we add the features :-)&nbsp;</p>
+<p>Because of Basic Auth for Twitter will be deprecated soon this month , we will use OAuth . OAuth is far more secure than Basic OAuth , we don't have to use the username and password as our credentials to connect to twitter. But there's one thing that maybe in a mind of some twitter apps developers that have already code with OAuth before : "How about the authorization page on twitter allowing the application to access by getting the token?? " ya.. Bot (robot) in the general term is work in background mode (no GUI) so , in order to get the token without have to click "Allow" , all we have to do is get it at the developer page and set it at the configuration.&nbsp;</p>
+<p>Now , what about the SMS Reporting ?? it's easy :-) because twitter already have this , we just have to set our cellphone number to subscribe this feature .</p>
+<p><strong>Let Start !!<!--more--></strong></p>
+<p>From the <a href="http://www.opensecuritylab.org/making-geoip-based-ip-locator-with-maps-and-t" target="_blank">Making GeoIP - based IP locator with Maps and twitter post in PHP</a> , to update the status using Basic Auth we use this code :</p>
+<blockquote class="posterous_medium_quote">
+<p>include("Twitter.class.php");<br />&nbsp;<br />&nbsp;&nbsp;&nbsp; $twitter = new Twitter();<br />&nbsp;&nbsp;&nbsp; $twitter-&gt;username = "usernameeeee";<br />&nbsp;&nbsp;&nbsp; $twitter-&gt;password = "mY-p4s5W0o0RD";<br />&nbsp;&nbsp;&nbsp; $twitter-&gt;update('xml','IP : '. $ip .' '. $isp .','. $record-&gt;country_name .','. $GEOIP_REGION_NAME[$record-&gt;country_code][$record-&gt;region] .','. $record-&gt;city .', ('. $record-&gt;latitude .','. $record-&gt;longitude.') #iploc');</p>
+</blockquote>
+<p>that's the only code we have to change :-)</p>
+<p><strong>Steps :</strong></p>
+<ol>
+<li>Get the twitteroauth by <a href="http://twitter.com/abraham" target="_blank">@abraham</a> at github : <a href="http://github.com/abraham/twitteroauth">http://github.com/abraham/twitteroauth</a></li>
+<li>Put it at the same directory with the app we made before &gt;&gt; <a href="http://www.opensecuritylab.org/making-geoip-based-ip-locator-with-maps-and-t" target="_blank">Making GeoIP - based IP locator with Maps and twitter post in PHP</a></li>
+<li>Change the code above with this :</li>
+</ol>
+<blockquote class="posterous_medium_quote">
+<p>$consumer_key = "CHANGE_IT_WITH_THE_CONSUMER_KEY";<br />$consumer_secret = "CHANGE_IT_WITH_THE_CONSUMER_SECRET";<br />$access_key = "CHANGE_IT_WITH_THE_ACCESS_TOKEN";<br />$access_secret = "CHANGE_IT_WITH_THE_ACCESS_TOKEN_SECRET";<br />&nbsp;<br />require_once('twitteroauth/twitteroauth.php');<br />&nbsp;<br />$connection = new TwitterOAuth ($consumer_key ,$consumer_secret , $access_key , $access_secret );<br />&nbsp;<br />$connection-&gt;post('statuses/update', array('status' =&gt; 'IP : '. $ip .' '. $isp .','. $record-&gt;country_name .','.  $GEOIP_REGION_NAME[$record-&gt;country_code][$record-&gt;region] .','.  $record-&gt;city .', ('. $record-&gt;latitude .','.  $record-&gt;longitude.') #iploc'));</p>
+</blockquote>
+<p><strong>How to get the Consumer key , Consumer Secret , Access Token and Access Token Secret ?</strong></p>
+<ul>
+<li>Login to the twitter with your username and password</li>
+<li>Register a new Application here : <a href="http://dev.twitter.com/apps/new">http://dev.twitter.com/apps/new</a>&nbsp; ( note : set the "Default Access type" as "Read &amp; Write" so we can post the status update )</li>
+<li>After the Application successfully created , we can get the Consumer key and Consumer secret at the application Settings and get the  Access Token and Access Token Secret at the "My Access Token" page.</li>
+</ul>
+<p>Now , when you access the website ( e.g <a href="http://iploc.co.cc">http://iploc.co.cc</a> ) every unique access will be posted to twitter with oauth ( no duplication tweets with the last tweet )</p>
+<p><div class='p_embed p_image_embed'>
+<a href="http://getfile8.posterous.com/getfile/files.posterous.com/temp-2010-08-02/lJEeIHtIcrcIwqAjieaIzHtueouuDBojqavFCesbrnvctulhetoicAttdxwE/iploc.png"><img alt="Iploc" src="http://getfile8.posterous.com/getfile/files.posterous.com/temp-2010-08-02/lJEeIHtIcrcIwqAjieaIzHtueouuDBojqavFCesbrnvctulhetoicAttdxwE/iploc.png" /></a>
+</div>
+Ya .. for this account , i made it Protected and i am the only follower :-) so that i'm the only one (with twitter guys) that can see the tweets .</p>
+<p>OK , Done with the OAuth things .. now , how about the <strong>SMS Reporting</strong> ??</p>
+<ul>
+<li>Go to <a href="http://twitter.com/devices">http://twitter.com/devices</a></li>
+<li>follow the instructions to register your number </li>
+<li>After registered , open your Bot's twitter account ( e.g <a href="http://twitter.com/iploc">http://twitter.com/iploc</a> ) and click at the grey button that looks like the mobile phone to follow ( every tweets made will be sent to your phone as a text message ) , if it turns green , then all the tweet is officially will be sent to your phone.</li>
+</ul>
+<p><div class='p_embed p_image_embed'>
+<a href="http://getfile2.posterous.com/getfile/files.posterous.com/temp-2010-08-02/djglfnhudCeBhuBiCaiqaDkrjjdytAHilGIosqlmpCHkrBdGlfhwdDgzuhbh/follow_mobile.png"><img alt="Follow_mobile" src="http://getfile2.posterous.com/getfile/files.posterous.com/temp-2010-08-02/djglfnhudCeBhuBiCaiqaDkrjjdytAHilGIosqlmpCHkrBdGlfhwdDgzuhbh/follow_mobile.png" /></a>
+</div>
+And this is what appears on my phone :</p>
+<p><div class='p_embed p_image_embed'>
+<a href="http://getfile2.posterous.com/getfile/files.posterous.com/temp-2010-08-02/lbkjqknqIwBiujJpxIxEFJsmosEHoIDmmvGgvBumkAAmAbsfgdvDnkgcChbo/hp.jpg"><img alt="Hp" src="http://getfile2.posterous.com/getfile/files.posterous.com/temp-2010-08-02/lbkjqknqIwBiujJpxIxEFJsmosEHoIDmmvGgvBumkAAmAbsfgdvDnkgcChbo/hp.jpg" /></a>
+</div>
+I hope you like it.. <strong>Happy Hacking :-D</strong></p>]]></content:encoded>
+	<excerpt:encoded><![CDATA[As seen on my previous post about Making GeoIP - based IP locator with Maps and twitter post in PHP , it can Detect the IP , Locate it , Show it on maps , and post it to twitter . But now , we add the features :-) Because of Basic Auth for Twitter...]]></excerpt:encoded>	
+
+	<wp:post_date>Mon Aug 02 19:20:00 -0700 2010</wp:post_date>
+	<wp:post_date_gmt>Mon Aug 02 19:20:00 -0700 2010</wp:post_date_gmt>
+	<wp:comment_status>open</wp:comment_status>
+	<wp:ping_status>open</wp:ping_status>
+	<wp:post_id>24828449</wp:post_id>
+	<wp:post_name>ip-logger-with-sms-reporting-using-twitter-oa</wp:post_name>
+	<wp:status>publish</wp:status>
+	<wp:post_parent>0</wp:post_parent>
+	<wp:menu_order>0</wp:menu_order>
+	<wp:post_type>post</wp:post_type>
+	<wp:post_password></wp:post_password>
+	<wp:is_sticky>0</wp:is_sticky>
+
+	
+</item>

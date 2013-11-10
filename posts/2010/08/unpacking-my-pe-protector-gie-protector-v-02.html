@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<link href='../../../exports.css' rel='stylesheet'>
+
+</head>
+<body>
+<div id='wrap'>
+<div id='header'>
+<h1>Open Security Laboratory</h1>
+<h2>This is an archived post
+</h2>
+</div>
+<div id='content'><div id='nav'>
+<a href="../../../index-3.html">Index</a>
+&nbsp; 
+<a href="../../../posts/2010/08/simple-hybrid-cipher-online-encryptor-decrypt.html">Next</a>
+</div>
+<div class='post'>
+<div class='post_header'>
+<h3>Unpacking my PE Protector (Gie Protector v 0.2)</h3>
+<div class='post_info'>
+<span class='post_time'>August  9 2010,  6:49 AM</span>
+<span class='author'>&nbsp;by Panggi Libersa Jasri Akadol</span>
+</div>
+</div>
+<div class='post_body'><p><div class='p_embed p_file_embed'>
+<div class='p_embed_description'>
+<strong>Unpacking.GIE.EN.swf</strong>
+<a href="../../../file/2010/08/3569343-Unpacking.GIE.EN.swf">View this file</a>
+</div>
+</div>
+What is PE ? and why should it be protected ?</p>
+<p>OK , let's take a look from wikipedia :</p>
+<blockquote>
+<p>The <strong>Portable Executable</strong> (PE) format is a <a href="http://en.wikipedia.org/wiki/File_format" title="File format">file format</a> for <a href="http://en.wikipedia.org/wiki/Executable" title="Executable">executables</a>, <a href="http://en.wikipedia.org/wiki/Object_file" title="Object file">object code</a> and <a href="http://en.wikipedia.org/wiki/Dynamic-link_library" title="Dynamic-link library">DLLs</a>, used in 32-bit and 64-bit versions of <a href="http://en.wikipedia.org/wiki/Microsoft_Windows" title="Microsoft Windows">Windows</a> <a href="http://en.wikipedia.org/wiki/Operating_system" title="Operating system">operating systems</a>.  The term "portable" refers to the format's versatility in numerous  environments of operating system software architecture. The PE format is  a data structure that encapsulates the information necessary for the  Windows OS loader to manage the wrapped executable code. This includes <a href="http://en.wikipedia.org/wiki/Library_%28computer_science%29#Dynamic_linking" class="mw-redirect" title="Library (computer science)">dynamic library references for linking</a>, <a href="http://en.wikipedia.org/wiki/Application_programming_interface" title="Application programming interface">API</a> export and import tables, resource management data and <a href="http://en.wikipedia.org/wiki/Thread-local_storage" title="Thread-local storage">thread-local storage</a> (TLS) data. On <a href="http://en.wikipedia.org/wiki/Windows_NT" title="Windows NT">NT</a> operating systems, the PE format is used for <a href="http://en.wikipedia.org/wiki/EXE" title="EXE">EXE</a>, DLL, OBJ, SYS (device driver), and other file types. The <a href="http://en.wikipedia.org/wiki/Extensible_Firmware_Interface" title="Extensible Firmware Interface">Extensible Firmware Interface (EFI)</a> specification states that PE is the standard executable format in EFI environments.</p>
+<p>PE is a modified version of the Unix <a href="http://en.wikipedia.org/wiki/COFF" title="COFF">COFF</a> file format. <strong>PE/COFF</strong> is an alternative term in Windows development.</p>
+<p>On Windows NT operating systems, PE currently supports the <a href="http://en.wikipedia.org/wiki/IA-32" title="IA-32">IA-32</a>, <a href="http://en.wikipedia.org/wiki/IA-64" class="mw-redirect" title="IA-64">IA-64</a>, and <a href="http://en.wikipedia.org/wiki/X86-64" title="X86-64">x86-64</a> (AMD64/Intel64) <a href="http://en.wikipedia.org/wiki/Instruction_set_architecture" class="mw-redirect" title="Instruction set architecture">instruction set architectures</a> (ISAs). Prior to <a href="http://en.wikipedia.org/wiki/Windows_2000" title="Windows 2000">Windows 2000</a>, Windows NT (and thus PE) supported the <a href="http://en.wikipedia.org/wiki/MIPS_architecture" title="MIPS architecture">MIPS</a>, <a href="http://en.wikipedia.org/wiki/DEC_Alpha" title="DEC Alpha">Alpha</a>, and <a href="http://en.wikipedia.org/wiki/PowerPC" title="PowerPC">PowerPC</a> ISAs. Because PE is used on <a href="http://en.wikipedia.org/wiki/Windows_CE" title="Windows CE">Windows CE</a>, it continues to support several variants of the MIPS, <a href="http://en.wikipedia.org/wiki/ARM_architecture" title="ARM architecture">ARM</a> (including Thumb), and <a href="http://en.wikipedia.org/wiki/SuperH" title="SuperH">SuperH</a> ISAs.</p>
+</blockquote>
+<p>I hope you understand :-D<!--more--></p>
+<p>In short , PE is the format of the executable binary in Windows Operating System ( .exe , .dll ) . Let's make it clear , it's "BINARY" , not source code . Ya , why should i protect it ? answer : because it can be decompiled (google it) and people who decompile it can learn the logic of the code (in assembly language). Imagine that you are the Windows based software developer and sell your software . In order to make it usable by people , you have to protect it so only who has purchased it can use the software. Usually the software developer use Serial Number for the protection of their software. But , is that secure enough ? not really .. i can say that because you still can decompile and crack it ( patch or generating the serials ) . For more about "cracking" things or "RCE ( Reverse Code Engineering) " just google it , there are so many information out there.</p>
+<p>Now , what is it about with my blog post ? Gie Protector v 0.2 ?</p>
+<p>OK , long time ago in a galaxy far .. far away , i made a PE Protector to protect the PE from being cracked by the cracker . But few months after it was released , it was cracked :-p wanna try my PE Protector ?? download it here &gt;&gt; <a href="http://nebeng-di.awardspace.com">http://nebeng-di.awardspace.com</a></p>
+<p>This is what it looks like :</p>
+<p><div class='p_embed p_image_embed'>
+<img src='../../../image/2010/08/13448338-gp.png'>
+</div>
+And the Video above is the way to crack (unpack) my protector with OllyDbg . Happy watching :-D</p>
+<p>&nbsp;</p></div>
+<div class='post_tags'>
+<h4>Tags</h4>
+<div class='post_tags_list'>cryptography, reverseengineering, security</div>
+</div>
+<div class='post_responses'>
+<h4>844 views and 0 responses</h4>
+<ul class='post_responses list'>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

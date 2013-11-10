@@ -1,0 +1,440 @@
+<item>
+	<title>Storing Passwords Securely using Salt in PHP</title>
+	<link>http://www.opensecuritylab.org/storing-passwords-securely-using-salt-in-php</link>
+	<pubDate>Tue Jul 13 03:58:00 -0700 2010</pubDate>
+	
+	<dc:creator><![CDATA[Panggi Libersa Jasri Akadol]]></dc:creator>
+	
+	
+		<category domain="tag" nicename="Cryptography"><![CDATA[Cryptography]]></category>
+	
+		<category domain="tag" nicename="Programming"><![CDATA[Programming]]></category>
+	
+		<category domain="tag" nicename="Security"><![CDATA[Security]]></category>
+	
+		<category domain="tag" nicename="Web+Development"><![CDATA[Web Development]]></category>
+	
+
+	<category><![CDATA[Uncategorized]]></category>
+
+	<category domain="category" nicename="uncategorized"><![CDATA[Uncategorized]]></category>
+
+  <guid isPermaLink="false">http://www.opensecuritylab.org/storing-passwords-securely-using-salt-in-php</guid>
+	<description></description>
+	<content:encoded><![CDATA[<p>A password is a secret word or string of characters that is used for authentication, to prove identity or gain access to a resource . The password should be kept secret  from those not allowed access. (Wikipedia).</p>
+
+<p>From the definition above , we know how important the password is , and we have to keep it secret. To keep it secret means that we as the password owner should not let people know what the password is . And also the public service owner (e.g Facebook , Twitter etc) that facilitate the storing of their user&rsquo;s passwords has to store the passwords securely.</p>
+
+<p>Now, our focus is about how to store the password securely in PHP.</p>
+
+<h1>Storing Hashes</h1>
+
+<p>Imagine that someday your server got hacked and the hackers can see the database , they open up the &ldquo;user&rdquo; table and look at the &ldquo;username&rdquo; and &ldquo;password&rdquo; fields . Because of you just store the password in plain text , they will easily see the username and password combination such as &ldquo;<a href="mailto:hero@villains.com">hero@villains.com</a>&rdquo; as the username with the password &ldquo;th1s-15_r3aLLy+s3curE&rdquo; and login to the site with these credentials easily. But , it will be more difficult to the hacker to get your access if the password and or username is encrypted ( e.g username : &ldquo;<a href="mailto:hero@villains.com">hero@villains.com</a>&rdquo; password : &ldquo;a1685c90afe2deb801595dedb80321b0bd0a8e5b&rdquo; ) . As you can see the password is encrypted , and to get the &ldquo;plain text&rdquo; , the hacker should know the &ldquo;encryption algorithm&rdquo; used to encrypt the password.</p>
+
+<h2>Implementation in PHP</h2>
+
+<p>There are two ways of implementation in PHP :</p>
+
+<ol>
+<li><p>if your PHP installation supports it (the chances are that it will) then you will be able to use the functions such as md5() and sha1().</p></li>
+<li><p>you use the function made in PHP , wether you get it from the web or make it your own.</p></li>
+</ol>
+
+
+<p>Example:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="local-variable">$password</span> = <span class="string"><span class="delimiter">'</span><span class="content">1234</span><span class="delimiter">'</span></span>;
+
+<span class="local-variable">$hash</span> = <span class="predefined">sha1</span>(<span class="local-variable">$password</span>);</pre></div>
+</div>
+
+
+<p>and the result will be : &ldquo;7110eda4d09e062aa5e4a390b0a572ac0d2c0220&rdquo;</p>
+
+<h2>Why is the hash is secure ?</h2>
+
+<p>Hashes can not be decrypted , Why ??</p>
+
+<p>Example: in sha1 algorithm</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>a = 86f7e437faa5a7fce15d1ddcb9eaeaea377667b8
+
+secret = e5e9fa1ba31ecd1ae84f75caaa474f3a663f05f4
+
+this-is-a-really-long-password-and-i-don't-want-to-make-it-short = 4856c46fe3e8d172db08d60c38a0c1542305fe83</pre></div>
+</div>
+
+
+<h2>Why is the hash is NOT really secure ?</h2>
+
+<p>We can get the original text by using lookup attack such as Brute force , Dictionary , Rainbow Tables etc</p>
+
+<h1>Salting the passwords</h1>
+
+<p>The idea in salts technique is simple , by adding a string to a password to change its end hash, which will be completely different from the original password hash.</p>
+
+<h2>Static Salts</h2>
+
+<h3>Simple salts</h3>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="local-variable">$salt</span> = <span class="string"><span class="delimiter">'</span><span class="content">123456789987654321</span><span class="delimiter">'</span></span>; <span class="local-variable">$password</span> = <span class="string"><span class="delimiter">'</span><span class="content">password</span><span class="delimiter">'</span></span>; 
+<span class="local-variable">$start_hash</span> = <span class="predefined">sha1</span>(<span class="local-variable">$salt</span> . <span class="local-variable">$password</span>); 
+<span class="local-variable">$end_hash</span> = <span class="predefined">sha1</span>(<span class="local-variable">$password</span> . <span class="local-variable">$salt</span>);</pre></div>
+</div>
+
+
+<h3>Complex salts</h3>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="local-variable">$salt</span> = <span class="string"><span class="delimiter">'</span><span class="content">123456789987654321</span><span class="delimiter">'</span></span>; 
+<span class="local-variable">$password</span> = <span class="string"><span class="delimiter">'</span><span class="content">pass</span><span class="delimiter">'</span></span>; 
+<span class="local-variable">$password_array</span> = <span class="predefined">str_split</span>(<span class="local-variable">$password</span>, <span class="integer">2</span>);</pre></div>
+</div>
+
+
+<p>The contents of $password_array will look something like this.</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="predefined">Array</span> ( 
+[<span class="integer">0</span>] =&gt; pa 
+[<span class="integer">1</span>] =&gt; ss )</pre></div>
+</div>
+
+
+<p>Now, to add the salt you would simply use:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="local-variable">$hash</span> = <span class="predefined">sha1</span>(<span class="local-variable">$password_array</span>[<span class="integer">0</span>] . <span class="local-variable">$salt</span> . <span class="local-variable">$password_array</span>[<span class="integer">1</span>]);</pre></div>
+</div>
+
+
+<p>Here&rsquo;s the complete code:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="local-variable">$salt</span> = <span class="string"><span class="delimiter">'</span><span class="content">123456789987654321</span><span class="delimiter">'</span></span>;
+
+<span class="local-variable">$password</span> = <span class="string"><span class="delimiter">'</span><span class="content">pass</span><span class="delimiter">'</span></span>; <span class="local-variable">$password_array</span> = <span class="predefined">str_split</span>(<span class="local-variable">$password</span>, <span class="integer">2</span>);
+
+<span class="local-variable">$hash</span> = <span class="predefined">sha1</span>(<span class="local-variable">$password_array</span>[<span class="integer">0</span>] . <span class="local-variable">$salt</span> . <span class="local-variable">$password_array</span>[<span class="integer">1</span>]);</pre></div>
+</div>
+
+
+<h3>Split password in the middle</h3>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="local-variable">$salt</span> = <span class="string"><span class="delimiter">'</span><span class="content">123456789987654321</span><span class="delimiter">'</span></span>;
+
+<span class="local-variable">$password</span> = <span class="string"><span class="delimiter">'</span><span class="content">password</span><span class="delimiter">'</span></span>;
+
+<span class="local-variable">$password_length</span> = length(<span class="local-variable">$password</span>); <span class="comment">// int 8</span>
+
+<span class="local-variable">$split_at</span> = <span class="local-variable">$password_length</span> / <span class="integer">2</span>; <span class="comment">// int 4</span>
+
+<span class="local-variable">$password_array</span> = <span class="predefined">str_split</span>(<span class="local-variable">$password</span>, <span class="local-variable">$split_at</span>);
+
+<span class="local-variable">$hash</span> = <span class="predefined">sha1</span>(<span class="local-variable">$password_array</span>[<span class="integer">0</span>] . <span class="local-variable">$salt</span> . <span class="local-variable">$password_array</span>[<span class="integer">1</span>]);</pre></div>
+</div>
+
+
+<h2>Dynamic salting</h2>
+
+<p>Dynamic salting is just like using a static salt, except that the salt is different for every user, and is stored inside the database. Of course, if somebody were to grab a copy of the database, they would have the hashes and the salt. This is why we use both static salts and dynamic salts together. A dynamic salt is usually a random number, as this is easy to generate with PHP.</p>
+
+<h3>Simple dynamic salts</h3>
+
+<p>A simple dynamic salt is when you have a salt at either end of the password. For example, we could have the dynamic salt at the front of the password and the static salt at the end:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="local-variable">$static_salt</span> = <span class="string"><span class="delimiter">'</span><span class="content">123456789987654321</span><span class="delimiter">'</span></span>; <span class="local-variable">$dynamic_salt</span> = mt_rand(); 
+<span class="local-variable">$password</span> = <span class="string"><span class="delimiter">'</span><span class="content">password</span><span class="delimiter">'</span></span>; 
+<span class="local-variable">$hash</span> = <span class="predefined">sha1</span>(<span class="local-variable">$dynamic_salt</span> . <span class="local-variable">$password</span> . <span class="local-variable">$static_salt</span>);</pre></div>
+</div>
+
+
+<p>This is pretty simple stuff. All you need to do is store the dynamic salt inside the database when you generate the salt for the first time (that is, at user registration)
+so that you can use it to check the user password when they log in to your website.</p>
+
+<h3>Complex dynamic salts</h3>
+
+<p>A complex dynamic salt is where we split the password up and put a salt in the middle, and one at the end. Of course you don&rsquo;t need to do it this way; you could split the password up however you like, and place the salt wherever you like—I&rsquo;m just doing it this way because it&rsquo;s easier.
+We&rsquo;ll re-use the code from the plugin that we made earlier, and update it.</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="keyword">function</span> <span class="function">hash_password</span>(<span class="local-variable">$password</span>, <span class="local-variable">$static_salt</span>)
+{
+<span class="local-variable">$dynamic_salt</span> = mt_rand();
+<span class="local-variable">$password_length</span> = length(<span class="local-variable">$password</span>);
+<span class="local-variable">$split_at</span> = <span class="local-variable">$password_length</span> / <span class="integer">2</span>;
+<span class="local-variable">$password_array</span> = <span class="predefined">str_split</span>(<span class="local-variable">$password</span>, <span class="local-variable">$split_at</span>);
+<span class="local-variable">$hash</span> = <span class="predefined">sha1</span>(<span class="local-variable">$password_array</span>[<span class="integer">0</span>] . <span class="local-variable">$static_salt</span> . <span class="local-variable">$password_array</span>[<span class="integer">1</span>] . <span class="local-variable">$dynamic_salt</span>);
+<span class="keyword">return</span> <span class="local-variable">$hash</span>;
+}</pre></div>
+</div>
+
+
+<p>The difference here is that we place the $static_salt variable in the middle and the $dynamic_salt at the end. We could&rsquo;ve split the password anywhere, as many times as we liked, and rearranged it to make it even more secure. But this way is simple and we didn&rsquo;t need to change all that much.</p>]]></content:encoded>
+	<excerpt:encoded><![CDATA[A password is a secret word or string of characters that is used for authentication, to prove identity or gain access to a resource . The password should be kept secret from those not allowed access. (Wikipedia). From the definition above , we kno...]]></excerpt:encoded>	
+
+	<wp:post_date>Tue Jul 13 03:58:00 -0700 2010</wp:post_date>
+	<wp:post_date_gmt>Tue Jul 13 03:58:00 -0700 2010</wp:post_date_gmt>
+	<wp:comment_status>open</wp:comment_status>
+	<wp:ping_status>open</wp:ping_status>
+	<wp:post_id>22806379</wp:post_id>
+	<wp:post_name>storing-passwords-securely-using-salt-in-php</wp:post_name>
+	<wp:status>publish</wp:status>
+	<wp:post_parent>0</wp:post_parent>
+	<wp:menu_order>0</wp:menu_order>
+	<wp:post_type>post</wp:post_type>
+	<wp:post_password></wp:post_password>
+	<wp:is_sticky>0</wp:is_sticky>
+
+	
+		<wp:comment>
+			<wp:comment_id>9368950</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[Sander]]></wp:comment_author>
+				<wp:comment_author_url><![CDATA[]]></wp:comment_author_url>
+			
+			<wp:comment_date>Wed Jul 13 13:09:25 -0700 2011</wp:comment_date>
+			<wp:comment_date_gmt>Wed Jul 13 13:09:25 -0700 2011</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Nice, but how to check  the password?
+
+Can you write me the function password_check?
+
+Thanks.]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+		<wp:comment>
+			<wp:comment_id>10129086</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[Bob]]></wp:comment_author>
+				<wp:comment_author_url><![CDATA[]]></wp:comment_author_url>
+			
+			<wp:comment_date>Mon Nov 28 17:58:57 -0800 2011</wp:comment_date>
+			<wp:comment_date_gmt>Mon Nov 28 17:58:57 -0800 2011</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Hey Sander, try these:
+
+function re_hash_password($password, $static_salt, $dynamic_salt)
+{
+$password_length = length($password);
+$split_at = $password_length / 2;
+$password_array = str_split($password, $split_at);
+$hash = sha1($password_array[0] . $static_salt . $password_array[1] . $dynamic_salt);
+return $hash
+}
+
+
+function password_check($username, $password, $static_salt)
+{
+
+$result=mysql_query(&quot;SELECT dynamic_salt, password FROM users WHERE username $username LIMIT 1;&quot;);
+$row = mysql_fetch_assoc($result);
+
+$dynamic_salt = $row['dynamic_salt'];
+
+if ($password == re_hash_password ($password, $static_salt, $dynamic_salt)) {
+//password matches
+return true;
+} else {
+//wrong password
+return false;
+}
+
+}]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+		<wp:comment>
+			<wp:comment_id>10129092</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[Bob]]></wp:comment_author>
+				<wp:comment_author_url><![CDATA[]]></wp:comment_author_url>
+			
+			<wp:comment_date>Mon Nov 28 18:01:16 -0800 2011</wp:comment_date>
+			<wp:comment_date_gmt>Mon Nov 28 18:01:16 -0800 2011</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Whoops, major error in that code, change to this:
+
+$dynamic_salt = $row['dynamic_salt'];
+$saved_pass = $row['password'];
+
+if ($password == re_hash_password ($saved_pass, $static_salt, $dynamic_salt)) {]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+		<wp:comment>
+			<wp:comment_id>10727188</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[Dennis]]></wp:comment_author>
+				<wp:comment_author_url><![CDATA[http://www.denys-klymenko.com/blog]]></wp:comment_author_url>
+			
+			<wp:comment_date>Wed Mar 14 03:14:36 -0700 2012</wp:comment_date>
+			<wp:comment_date_gmt>Wed Mar 14 03:14:36 -0700 2012</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Nice article, but there is no function length() in PHP, I bet you did mean strlen() function ;)]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+		<wp:comment>
+			<wp:comment_id>11004267</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[Noel]]></wp:comment_author>
+				<wp:comment_author_url><![CDATA[]]></wp:comment_author_url>
+			
+			<wp:comment_date>Sat May 12 13:11:26 -0700 2012</wp:comment_date>
+			<wp:comment_date_gmt>Sat May 12 13:11:26 -0700 2012</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[I'm not sure whether this makes any difference or not to the functionality/security of the code, but if you have a password of (say) 7 or 9 characters, then PHP will &quot;lose&quot; one of the characters in the password when str_split() is used.
+
+To resolve this, ceil() can be used, like this:
+
+$password_array = str_split($password, ceil($split_at));
+
+Thanks for the example - very helpful :)
+
+Noel]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+		<wp:comment>
+			<wp:comment_id>11164057</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[Tom]]></wp:comment_author>
+				<wp:comment_author_url><![CDATA[]]></wp:comment_author_url>
+			
+			<wp:comment_date>Sun Jun 24 14:38:10 -0700 2012</wp:comment_date>
+			<wp:comment_date_gmt>Sun Jun 24 14:38:10 -0700 2012</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Interesting article!
+
+I do however not see the point of splitting passwords when you anyway use static salt. In order to be able to crack it you need to know the static salt, which can be done either by trial&amp;error (brute force) or by obtaing the source code by hacking. Guessing the password splitting must be considered really easy compared to guessing the static salt, and if an attacker gets hold of the source code he will find out about the splitting.
+
+Messing about with splitting passwords is to my view just wasting programming time without achieving any real benefit.
+]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+		<wp:comment>
+			<wp:comment_id>11197739</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[Noel]]></wp:comment_author>
+				<wp:comment_author_url><![CDATA[]]></wp:comment_author_url>
+			
+			<wp:comment_date>Wed Jul 04 15:36:11 -0700 2012</wp:comment_date>
+			<wp:comment_date_gmt>Wed Jul 04 15:36:11 -0700 2012</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[The value of splitting the password hash is based (I think) on the presumption that it's a lot easier to successfully carry out an SQL exploit than it is to gain root access to a server. Trying to brute force a scheme that employs static/dynamic salts in a non-obvious way must have some effect on the time it will take to determine what the hash value was originally derived from.
+
+This technique is also useful in situations where a database is compromised but not the rest of the server (or the web server and database are running on different servers, and only the database is compromised) because even if an attacker has the password hash and the static/dynamic salts, they won't know what algorithm is being used. This is particularly beneficial in situations where a password (after being processed through the algorithm) is being used to protect encryption/decryption keys, or a backup of the database is misappropriated or lost.]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+		<wp:comment>
+			<wp:comment_id>11221238</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[Tom]]></wp:comment_author>
+				<wp:comment_author_url><![CDATA[]]></wp:comment_author_url>
+			
+			<wp:comment_date>Thu Jul 12 11:22:49 -0700 2012</wp:comment_date>
+			<wp:comment_date_gmt>Thu Jul 12 11:22:49 -0700 2012</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Thanks for your reply! This truely interests me.
+
+I am however not sure that I quite understand you.
+
+A static stalt should not be stored in the DB. It should be hard coded. Hence it will be just as protected/unprotected as the source code where you carry out the password splitting. In other words, splitting passwords does not add any extra security better than using a static salt but involves much more programming (including maintanence cost and possible bugs).
+
+If your intention is to make it harder for the hacker to find the way the hash was done (static salt and password splitting) by brute force, you could just skip the password splitting and add one more characters to the static salt instead. One extra character to the static salt would make it 255 times  (provided normal ascii is used) harder to guess.]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+		<wp:comment>
+			<wp:comment_id>11386121</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[fgdfg]]></wp:comment_author>
+				<wp:comment_author_url><![CDATA[]]></wp:comment_author_url>
+			
+			<wp:comment_date>Tue Sep 11 08:11:08 -0700 2012</wp:comment_date>
+			<wp:comment_date_gmt>Tue Sep 11 08:11:08 -0700 2012</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[sdgdfg]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+		<wp:comment>
+			<wp:comment_id>11728977</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[lol]]></wp:comment_author>
+				<wp:comment_author_url><![CDATA[]]></wp:comment_author_url>
+			
+			<wp:comment_date>Thu Dec 20 00:42:44 -0800 2012</wp:comment_date>
+			<wp:comment_date_gmt>Thu Dec 20 00:42:44 -0800 2012</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[^ Fag]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+		<wp:comment>
+			<wp:comment_id>11784120</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[gay dude]]></wp:comment_author>
+				<wp:comment_author_url><![CDATA[www.donthate.com]]></wp:comment_author_url>
+			
+			<wp:comment_date>Wed Jan 16 12:33:04 -0800 2013</wp:comment_date>
+			<wp:comment_date_gmt>Wed Jan 16 12:33:04 -0800 2013</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[^ hate speech]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+		<wp:comment>
+			<wp:comment_id>11893824</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[i]]></wp:comment_author>
+				<wp:comment_author_url><![CDATA[]]></wp:comment_author_url>
+			
+			<wp:comment_date>Fri Mar 08 20:03:35 -0800 2013</wp:comment_date>
+			<wp:comment_date_gmt>Fri Mar 08 20:03:35 -0800 2013</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[&lt; wanted to continue the trolling
+V will continue also]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+		<wp:comment>
+			<wp:comment_id>11921726</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[gern]]></wp:comment_author>
+				<wp:comment_author_url><![CDATA[]]></wp:comment_author_url>
+			
+			<wp:comment_date>Tue Apr 02 11:40:17 -0700 2013</wp:comment_date>
+			<wp:comment_date_gmt>Tue Apr 02 11:40:17 -0700 2013</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Please don't use the advice in this article any more. MD5 is no longer secure at all.
+
+mysql_query is no longer secure.
+
+Use SHA512 or some other hash then encrypt that with scrypt and always use PDO for queries.]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+</item>

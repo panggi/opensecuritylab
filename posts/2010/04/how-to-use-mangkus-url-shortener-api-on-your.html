@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<link href='../../../exports.css' rel='stylesheet'>
+<link href='../../../exports.css' rel='stylesheet'>
+
+</head>
+<body>
+<div id='wrap'>
+<div id='header'>
+<h1>Open Security Laboratory</h1>
+<h2>This is an archived post
+This is an archived post
+</h2>
+</div>
+<div id='content'><div id='nav'>
+<a href="../../../posts/2010/04/sixthsense-technology.html">Previous</a>
+&nbsp; 
+<a href="../../../index-4.html">Index</a>
+</div>
+<div class='post'>
+<div class='post_header'>
+<h3>How to use mangk.us URL shortener API on your PHP application</h3>
+<div class='post_info'>
+<span class='post_time'>April  3 2010,  5:47 PM</span>
+<span class='author'>&nbsp;by Panggi Libersa Jasri Akadol</span>
+</div>
+</div>
+<div class='post_body'><p>There are two Basic functions in api.php :</p>
+<p>"short" and "url"</p>
+<p>example :</p>
+<blockquote>
+<span style="font-size: x-small;">+ short</span><br /> <span style="font-size: x-small;">URL : <a href="http://mangk.us/api.php?short=http://mangk.us/panggi" title="http://mangk.us/api.php?short=http://mangk.us/panggi">http://mangk.us/api.php?short=http://mangk.us/panggi</a></span><br /> <span style="font-size: x-small;">result : http://twitter.com/panggi</span><br /> <span style="font-size: x-small;">+ url</span><br /> <span style="font-size: x-small;">URL : <a href="http://mangk.us/api.php?url=http://opensecuritylab.org" title="http://mangk.us/api.php?url=http://opensecuritylab.org">http://mangk.us/api.php?url=http://opensecuritylab.org</a></span><br /> <span style="font-size: x-small;">result : <a href="http://mangk.us/2">http://mangk.us/2</a></span>
+</blockquote>
+<p>With that basic functions on mangk.us you can make a function on your PHP application , but remember not to use URL encoding when you send the URL to mangk.us .</p>
+<p>Code :</p>
+<blockquote>
+<span style="font-size: x-small;">$request = 'http://mangk.us/api.php?url=' . $url;</span><br /><span style="font-size: x-small;">$result = processCurl( $request );</span><br /><span style="font-size: x-small;">if ($result) return $result;</span><br /><span style="font-size: x-small;">else return false;</span><br />
+</blockquote>
+<p>It's not a full code and you have to develop it by yourself .</p></div>
+<div class='post_tags'>
+<h4>Tags</h4>
+<div class='post_tags_list'>programming, startups, webdevelopment</div>
+</div>
+<div class='post_responses'>
+<h4>811 views and 0 responses</h4>
+<ul class='post_responses list'>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

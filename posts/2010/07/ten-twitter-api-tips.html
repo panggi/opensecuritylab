@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<link href='../../../exports.css' rel='stylesheet'>
+<link href='../../../exports.css' rel='stylesheet'>
+
+</head>
+<body>
+<div id='wrap'>
+<div id='header'>
+<h1>Open Security Laboratory</h1>
+<h2>This is an archived post
+This is an archived post
+</h2>
+</div>
+<div id='content'><div id='nav'>
+<a href="../../../posts/2010/07/the-developer-evangelist-handbook.html">Previous</a>
+&nbsp; 
+<a href="../../../index-3.html">Index</a>
+&nbsp; 
+<a href="../../../posts/2010/07/whats-new-on-oauth-20.html">Next</a>
+</div>
+<div class='post'>
+<div class='post_header'>
+<h3>Ten Twitter API Tips</h3>
+<div class='post_info'>
+<span class='post_time'>July 28 2010,  8:37 PM</span>
+<span class='author'>&nbsp;by Panggi Libersa Jasri Akadol</span>
+</div>
+</div>
+<div class='post_body'><p><div class='p_embed p_image_embed'>
+<img src='../../../image/2010/07/12855444-home-anywhere.png'>
+</div>
+</p>
+<p><strong>Develop Defensively</strong><br />“Develop defensively. For instance, when passing in scoping parameters like <em>since_id</em>, assume that the Twitter API will break one day and disregard <em>since_id</em> when building the result set.”<br /><em>–Barry Hess (@bjhess), co-creator of Follow Cost (<a href="http://followcost.com">http://followcost.com</a>)</em><p /><strong>Degrade Gracefully</strong><br />“The Twitter API can and will go down. Applications should have some sort of monitoring, graceful degradation, and informative error messages for users in the event that this happens. Because if you don’t, your app gets blamed, not Twitter.”<br /><em>–Damon Cortesi (@dacort), creator of TweetStats (<a href="http://tweetstats.com">http://tweetstats.com</a>)</em><em> and TweepSearch (<a href="http://tweepsearch.com">http://tweepsearch.com</a>)</em><p /><strong>Don’t Rely on screen_name</strong><br />“Always use <em>user_id</em> to reference accounts instead of <em>screen_name</em>. <em>screen_name</em> could change at anytime.”<br /><em>–Abraham Williams (@abraham)</em><p /><strong>Use 64-Bit Integers</strong><br />“Be sure to use long integers (Int64 in the .NET world) for storing ID values. 32-bit integers aren’t large enough for the ID values that Twitter is producing.”<br /><em>–Duane Roelands (@DWRoelands), creator of Quitter (<a href="http://getquitter.com">http://getquitter.com</a>)</em><p /><strong>Subscribe to the Google Group</strong><br />“Expect things to change. Twitter is a rapidly developing service, and what is true now may not be true in 12 months. Subscribe to the developer announcement list (<a href="http://groups.google.com/group/twitterdevelopment-talk)">http://groups.google.com/group/twitterdevelopment-talk)</a> and read it religiously.”<br /><em>–David Fisher (@tibbon), Web Ecology Project (<a href="http://webecologyproject.org">http://webecologyproject.org</a>)</em><p /><strong>Access the API in the Background</strong><br />“If you’re building a Web app, do as much of your Twitter communication outside the request-response cycle as you can. API calls to Twitter will often have errors or take unpredictable amounts of time. When possible, move API calls to background processes or cron jobs, batch them and cache the results. This gives users a more consistent experience, allows you to more easily handle errors and helps with staying under rate limits since your API calls are less of a function of the number of requests your app gets.”<br /><em>–Hayes Davis (@hayesdavis), creator of CheapTweet (<a href="http://cheaptweet.com">http://cheaptweet.com</a>) </em><em>and TweetReach (<a href="http://tweetreach.com">http://tweetreach.com</a>)</em><p /><strong>Use JSON</strong><br />“Get to know JSON. Even if you aren’t writing javascript, there are JSON parsers in most every language. JSON is leaner and meaner than XML and super easy to understand once you take 5 minutes to learn it. Every Twitter API method can return JSON data, so use it!”<br /><em>–Chad Etzel (@JazzyChad), creator of TweetGrid (<a href="http://tweetgrid.com">http://tweetgrid.com</a>)</em><em> and TweetHook (<a href="http://tweethook.com">http://tweethook.com</a>)</em><p /><strong>Optimize Caching</strong><br />“Learn everything you can about efficient caching and database queries. If your app gets popular, these two things will make or break your success.”<br /><em>–Noah Coffey (@noahwesley), creator of TweetFX (<a href="http://tweetfx.com">http://tweetfx.com</a>)</em><p /><strong>Support International Characters</strong><br />“Make sure your app supports more than just English characters, especially when updating a user’s status. For OAuth, this can mean extra legwork, since the content of the status update is part of what is used to authenticate the request — so it’s crucial it gets encoded properly. It seems some developers don’t test international characters — but Twitter is part of an international community, and this detail shouldn’t be overlooked.”<br /><em>–Andrew Perrin (@mageuzi), creator of Trowl (<a href="http://mageuzi.com/trowl/)">http://mageuzi.com/trowl/)</a></em><p /><strong>Do It Client Side</strong><br />“Twibes uses the powerful (and under-hyped) JASONP support in the Twitter API to get around usage quotas. By using Javascript to perform searches, a Web page can become more like a desktop app — connecting directly to Twitter and only sending the relevant new results up to a Web server. Distributing your application logic to many clients takes load off your server and distributes the Twitter API calls (thus using none of your app’s API quota).”<br /><em>–Adam Loving (@adamloving), creator of Twibes (<a href="http://twibes.com">http://twibes.com</a>)</em></p></div>
+<div class='post_tags'>
+<h4>Tags</h4>
+<div class='post_tags_list'>oauth, programming, restful, twitter, webdevelopment</div>
+</div>
+<div class='post_responses'>
+<h4>1455 views and 0 responses</h4>
+<ul class='post_responses list'>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

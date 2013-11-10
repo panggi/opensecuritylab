@@ -1,0 +1,53 @@
+<item>
+	<title>OAuth for credentials security in REST API access (my paper and presentation at idsecconf2010)</title>
+	<link>http://www.opensecuritylab.org/oauth-for-credentials-security-in-rest-api-ac</link>
+	<pubDate>Wed Oct 27 00:43:00 -0700 2010</pubDate>
+	
+	<dc:creator><![CDATA[Panggi Libersa Jasri Akadol]]></dc:creator>
+	
+	
+		<category domain="tag" nicename="Cloud+Computing"><![CDATA[Cloud Computing]]></category>
+	
+		<category domain="tag" nicename="Events"><![CDATA[Events]]></category>
+	
+		<category domain="tag" nicename="OAuth"><![CDATA[OAuth]]></category>
+	
+		<category domain="tag" nicename="Programming"><![CDATA[Programming]]></category>
+	
+		<category domain="tag" nicename="RESTful"><![CDATA[RESTful]]></category>
+	
+		<category domain="tag" nicename="Security"><![CDATA[Security]]></category>
+	
+		<category domain="tag" nicename="Web+Development"><![CDATA[Web Development]]></category>
+	
+
+	<category><![CDATA[Uncategorized]]></category>
+
+	<category domain="category" nicename="uncategorized"><![CDATA[Uncategorized]]></category>
+
+  <guid isPermaLink="false">http://www.opensecuritylab.org/oauth-for-credentials-security-in-rest-api-ac</guid>
+	<description></description>
+	<content:encoded><![CDATA[<p><div class='p_embed p_image_embed'>
+<a href="http://getfile4.posterous.com/getfile/files.posterous.com/temp-2010-10-27/rHvbEcqwAwtCHpvIvkbucDhswjsaIfctnitIsuthhiFGcarJwuuBoIDwezEt/idsecconf.jpg"><img alt="Idsecconf" src="http://getfile4.posterous.com/getfile/files.posterous.com/temp-2010-10-27/rHvbEcqwAwtCHpvIvkbucDhswjsaIfctnitIsuthhiFGcarJwuuBoIDwezEt/idsecconf.jpg" /></a>
+</div>
+You know OAuth , ya.. Open Authorization . Maybe i am one of the unofficial technology evangelist of it :-p because i like to talk about it whether in college , conference or social media . And i got the opportunity to be a speaker at idsecconf2010 ( Indonesian Security Conference 2010 ) in Bali this October.</p>
+<p>These are the links of my paper ( in Bahasa ) and presentation ( in English ) :</p>
+<p>- Paper : <a href="http://twkl.in/9x" target="_blank">http://twkl.in/9x</a><br /> - Presentation : <a href="http://twkl.in/9d" target="_blank">http://twkl.in/9d</a></p>
+<p>i hope it would help people understand how OAuth works :-)</p>]]></content:encoded>
+	<excerpt:encoded><![CDATA[You know OAuth , ya.. Open Authorization . Maybe i am one of the unofficial technology evangelist of it :-p because i like to talk about it whether in college , conference or social media . And i got the opportunity to be a speaker at idsecconf201...]]></excerpt:encoded>	
+
+	<wp:post_date>Wed Oct 27 00:43:00 -0700 2010</wp:post_date>
+	<wp:post_date_gmt>Wed Oct 27 00:43:00 -0700 2010</wp:post_date_gmt>
+	<wp:comment_status>open</wp:comment_status>
+	<wp:ping_status>open</wp:ping_status>
+	<wp:post_id>31683587</wp:post_id>
+	<wp:post_name>oauth-for-credentials-security-in-rest-api-ac</wp:post_name>
+	<wp:status>publish</wp:status>
+	<wp:post_parent>0</wp:post_parent>
+	<wp:menu_order>0</wp:menu_order>
+	<wp:post_type>post</wp:post_type>
+	<wp:post_password></wp:post_password>
+	<wp:is_sticky>0</wp:is_sticky>
+
+	
+</item>

@@ -1,0 +1,61 @@
+<item>
+	<title>Antidot for the anti-zionis worm with sample file and source code</title>
+	<link>http://www.opensecuritylab.org/antidot-for-the-anti-zionis-worm-with-sample</link>
+	<pubDate>Sat Jul 17 05:07:00 -0700 2010</pubDate>
+	
+	<dc:creator><![CDATA[Panggi Libersa Jasri Akadol]]></dc:creator>
+	
+	
+		<category domain="tag" nicename="Malware"><![CDATA[Malware]]></category>
+	
+		<category domain="tag" nicename="Programming"><![CDATA[Programming]]></category>
+	
+		<category domain="tag" nicename="Security"><![CDATA[Security]]></category>
+	
+
+	<category><![CDATA[Uncategorized]]></category>
+
+	<category domain="category" nicename="uncategorized"><![CDATA[Uncategorized]]></category>
+
+  <guid isPermaLink="false">http://www.opensecuritylab.org/antidot-for-the-anti-zionis-worm-with-sample</guid>
+	<description></description>
+	<content:encoded><![CDATA[<p><div class='p_embed p_image_embed'>
+<a href="http://getfile9.posterous.com/getfile/files.posterous.com/temp-2010-07-17/CbxsiJmmurdmzsJclcJwixcEsgtaACdpnDijnjdtssklruGJIxfnhdnlrkam/Computer_Worm.jpg"><img alt="Computer_worm" src="http://getfile9.posterous.com/getfile/files.posterous.com/temp-2010-07-17/CbxsiJmmurdmzsJclcJwixcEsgtaACdpnDijnjdtssklruGJIxfnhdnlrkam/Computer_Worm.jpg" /></a>
+</div>
+Just to share!! :-) i opened up my "Malware Oriented" folders and found this . I named it "antizionis" because there's a message about it when the computer get infected.</p>
+<p>I wrote the antidot at July 1st 2009 because my friend's computer got infected and no antivirus detected it. OK here are the details after i decompiled it :</p>
+<blockquote>
+<p>CRC32 : C5CF905E<br />File Size : 131.139 Byte<p />%SystemRoot%\system32\060785.bat<br />-------------------------<br />HKLM\SYSTEM\ControlSet003\Control\SafeBoot\AlternateShell<br />c:\windows\Help\explorer.exe<br />-------------------------<br />HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoFolderOptions<br />HKLM\Software\Policies\Microsoft\Windows NT\SystemRestore\DisableConfig<br />HKLM\Software\Policies\Microsoft\Windows NT\SystemRestore\DisableSR<br />HKCU\Control Panel\Desktop\SCRNSAVE.EXE<br />HKCU\Control Panel\Desktop\ScreenSaveTimeOut<br />c:\ahmad ahdi haikal zaqi nasia.exe<br />\system32\aparaparsaparyangparipircapar.exe<br />\system32\300403.exe<br />pilem lutchu\Doraemon-Pistol Perubah Tubuh Sebagian.rm.exe<br />pilem lutchu\Sinchan-Menginap Di Sekolah.rm.exe<br />pilem lutchu\TOM &amp; JERRY 2.rm.exe<br />c:\antiZionisme.rm.exe<br />HKCR\.reg\shell<br />HKCR\.reg\shell\Merge\<br />HKCR\.reg\shell\Merge\command\<br />HKCR\.txt\<br />HKCR\.txt\shell<br />HKCR\.txt\shell\Open\command\<br />HKCR\*\shellex\ContextMenuHandlers\Open With\<br />HKCR\.htm\<br />HKCR\.html\<br />HKLM\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Folder\SuperHidden\UncheckedValue<br />HKLM\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Folder\Hidden\SHOWALL\CheckedValue<br />HKLM\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Folder\Hidden\SHOWALL\DefaultValue<br />HKLM\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Folder\Hidden\NOHIDDEN\CheckedValue<br />HKLM\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Folder\Hidden\NOHIDDEN\DefaultValue<br />HKLM\Software\Microsoft\Windows\CurrentVersion\\Policies\System\NoDispScrSavPage<br />HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Hidden<br />HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\HideFileExt<br />HKCU\Control Panel\Desktop\MenuShowDelay<br />HKCU\Control Panel\Desktop\AutoEndTasks<br />----------------<br />HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\MSCONFIG.EXE\<br />%SystemRoot%\system32\appdata.vbs<br />----------------<a href="23248499#"><span>Save</span></a><br />\system32\run4.bat<br />\system32\HacKid'#39's.exe<br />%SystemRoot%\system32\050587.vbs</p>
+</blockquote>
+<p>the source code and sample file of the worm can be downloaded at <a href="http://static.malcoder.info/antizionis.zip">http://static.malcoder.info/antizionis.zip</a></p>]]></content:encoded>
+	<excerpt:encoded><![CDATA[Just to share!! :-) i opened up my "Malware Oriented" folders and found this . I named it "antizionis" because there's a message about it when the computer get infected. I wrote the antidot at July 1st 2009 because my friend's computer got infecte...]]></excerpt:encoded>	
+
+	<wp:post_date>Sat Jul 17 05:07:00 -0700 2010</wp:post_date>
+	<wp:post_date_gmt>Sat Jul 17 05:07:00 -0700 2010</wp:post_date_gmt>
+	<wp:comment_status>open</wp:comment_status>
+	<wp:ping_status>open</wp:ping_status>
+	<wp:post_id>23248499</wp:post_id>
+	<wp:post_name>antidot-for-the-anti-zionis-worm-with-sample</wp:post_name>
+	<wp:status>publish</wp:status>
+	<wp:post_parent>0</wp:post_parent>
+	<wp:menu_order>0</wp:menu_order>
+	<wp:post_type>post</wp:post_type>
+	<wp:post_password></wp:post_password>
+	<wp:is_sticky>0</wp:is_sticky>
+
+	
+		<wp:comment>
+			<wp:comment_id>4247238</wp:comment_id>
+			
+				<wp:comment_author><![CDATA[bibek]]></wp:comment_author>
+				<wp:comment_author_url><![CDATA[]]></wp:comment_author_url>
+			
+			<wp:comment_date>Wed Jul 28 21:25:32 -0700 2010</wp:comment_date>
+			<wp:comment_date_gmt>Wed Jul 28 21:25:32 -0700 2010</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[thanks]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+		</wp:comment>
+	
+</item>

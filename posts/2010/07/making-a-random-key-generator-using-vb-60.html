@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<link href='../../../exports.css' rel='stylesheet'>
+
+</head>
+<body>
+<div id='wrap'>
+<div id='header'>
+<h1>Open Security Laboratory</h1>
+<h2>This is an archived post
+</h2>
+</div>
+<div id='content'><div id='nav'>
+<a href="../../../index-4.html">Index</a>
+&nbsp; 
+<a href="../../../posts/2010/07/storing-passwords-securely-using-salt-in-php.html">Next</a>
+</div>
+<div class='post'>
+<div class='post_header'>
+<h3>Making a Random key Generator using VB 6.0</h3>
+<div class='post_info'>
+<span class='post_time'>July 13 2010,  6:25 AM</span>
+<span class='author'>&nbsp;by Panggi Libersa Jasri Akadol</span>
+</div>
+</div>
+<div class='post_body'><p>Why do you need this ?? you can make it for your password generator or when you like to code the malware , this code is good for making some random things a.k.a semi polymorphic (lame version) :-p</p>
+
+<p>Here is the code :</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>VERSION <span class="float">5.00</span>
+<span class="keyword">Begin</span> VB.Form Form1 
+   BackColor       =   <span class="error">&amp;</span>H80000002<span class="error">&amp;</span>
+   BorderStyle     =   <span class="integer">1</span>  <span class="string"><span class="delimiter">'</span><span class="content">Fixed Single</span></span>
+   Caption         =   <span class="error">&quot;</span>malcoder Random Key Generator<span class="error">&quot;</span>
+   ClientHeight    =   <span class="integer">5580</span>
+   ClientLeft      =   <span class="integer">45</span>
+   ClientTop       =   <span class="integer">330</span>
+   ClientWidth     =   <span class="integer">3615</span>
+   Icon            =   <span class="error">&quot;</span>Form1.frx<span class="error">&quot;</span>:<span class="integer">0000</span>
+   LinkTopic       =   <span class="error">&quot;</span>Form1<span class="error">&quot;</span>
+   MaxButton       =   <span class="integer">0</span>   <span class="string"><span class="delimiter">'</span><span class="content">False</span></span>
+   MinButton       =   <span class="integer">0</span>   <span class="string"><span class="delimiter">'</span><span class="content">False</span></span>
+   ScaleHeight     =   <span class="integer">5580</span>
+   ScaleWidth      =   <span class="integer">3615</span>
+   StartUpPosition =   <span class="integer">2</span>  <span class="string"><span class="delimiter">'</span><span class="content">CenterScreen</span></span>
+   <span class="keyword">Begin</span> VB.TextBox Text2 
+      Height          =   <span class="integer">315</span>
+      Left            =   <span class="integer">1320</span>
+      TabIndex        =   <span class="integer">4</span>
+      Top             =   <span class="integer">4620</span>
+      Width           =   <span class="integer">1875</span>
+   <span class="keyword">End</span>
+   <span class="keyword">Begin</span> VB.CommandButton Command2 
+      Caption         =   <span class="error">&quot;</span>Copy<span class="error">&quot;</span>
+      Height          =   <span class="integer">315</span>
+      Left            =   <span class="integer">2100</span>
+      TabIndex        =   <span class="integer">3</span>
+      Top             =   <span class="integer">5100</span>
+      Width           =   <span class="integer">1275</span>
+   <span class="keyword">End</span>
+   <span class="keyword">Begin</span> VB.CommandButton Command3 
+      BackColor       =   <span class="error">&amp;</span>H00E0E0E0<span class="error">&amp;</span>
+      Caption         =   <span class="error">&quot;</span>Stop<span class="error">&quot;</span>
+      Height          =   <span class="integer">315</span>
+      Left            =   <span class="integer">240</span>
+      MaskColor       =   <span class="error">&amp;</span>H00E0E0E0<span class="error">&amp;</span>
+      TabIndex        =   <span class="integer">2</span>
+      Top             =   <span class="integer">5100</span>
+      Visible         =   <span class="integer">0</span>   <span class="string"><span class="delimiter">'</span><span class="content">False</span></span>
+      Width           =   <span class="integer">1275</span>
+   <span class="keyword">End</span>
+   <span class="keyword">Begin</span> VB.Timer Timer1 
+      Enabled         =   <span class="integer">0</span>   <span class="string"><span class="delimiter">'</span><span class="content">False</span></span>
+      Interval        =   <span class="integer">100</span>
+      Left            =   <span class="integer">360</span>
+      Top             =   <span class="integer">5700</span>
+   <span class="keyword">End</span>
+   <span class="keyword">Begin</span> VB.CommandButton Command1 
+      Caption         =   <span class="error">&quot;</span>Generate<span class="error">&quot;</span>
+      Height          =   <span class="integer">315</span>
+      Left            =   <span class="integer">240</span>
+      TabIndex        =   <span class="integer">1</span>
+      Top             =   <span class="integer">5100</span>
+      Width           =   <span class="integer">1275</span>
+   <span class="keyword">End</span>
+   <span class="keyword">Begin</span> VB.TextBox Text1 
+      BackColor       =   <span class="error">&amp;</span>H80000007<span class="error">&amp;</span>
+      Enabled         =   <span class="integer">0</span>   <span class="string"><span class="delimiter">'</span><span class="content">False</span></span>
+      ForeColor       =   <span class="error">&amp;</span>H0000FFFF<span class="error">&amp;</span>
+      Height          =   <span class="integer">4275</span>
+      Left            =   <span class="integer">240</span>
+      MultiLine       =   -<span class="integer">1</span>  <span class="string"><span class="delimiter">'</span><span class="content">True</span></span>
+      TabIndex        =   <span class="integer">0</span>
+      Top             =   <span class="integer">180</span>
+      Width           =   <span class="integer">3135</span>
+   <span class="keyword">End</span>
+   <span class="keyword">Begin</span> VB.Label Label1 
+      BackColor       =   <span class="error">&amp;</span>H80000002<span class="error">&amp;</span>
+      Caption         =   <span class="error">&quot;</span>Panjang :<span class="error">&quot;</span>
+      Height          =   <span class="integer">315</span>
+      Left            =   <span class="integer">240</span>
+      TabIndex        =   <span class="integer">5</span>
+      Top             =   <span class="integer">4680</span>
+      Width           =   <span class="integer">735</span>
+   <span class="keyword">End</span>
+<span class="keyword">End</span>
+Attribute VB_Name = <span class="error">&quot;</span>Form1<span class="error">&quot;</span>
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+<span class="directive">Private</span> Sub Command1_Click()
+Timer1.Enabled = True
+<span class="keyword">If</span> Timer1.Enabled = True <span class="keyword">Then</span> Command3.Visible = True
+Text2.Enabled = False
+<span class="keyword">End</span> Sub
+
+<span class="directive">Private</span> Sub Command2_Click()
+<span class="string"><span class="delimiter">'</span><span class="content"> copy to clipboard</span></span>
+Clipboard.Clear
+Clipboard.SetText Text1.Text
+<span class="keyword">End</span> Sub
+
+<span class="directive">Private</span> Sub Command3_Click()
+Timer1.Enabled = False
+Command3.Visible = False
+Text2.Enabled = True
+<span class="keyword">End</span> Sub
+
+<span class="directive">Private</span> Sub Timer1_Timer()
+<span class="directive">On</span> Error Resume Next
+Dim RandomName <span class="keyword">As</span> <span class="keyword">String</span>
+Dim Panjang <span class="keyword">As</span> Long
+Dim i, a <span class="keyword">As</span> Long
+Dim alp <span class="keyword">As</span> <span class="keyword">String</span>
+
+<span class="string"><span class="delimiter">'</span><span class="content"> Random....</span></span>
+alp = <span class="error">&quot;</span><span class="integer">0123456789</span>abcdefghijklmnopqrstuvwxyzABCDEFGHIJ<span class="error">&quot;</span> <span class="error">&amp;</span> _
+    <span class="error">&quot;</span>LMNOPQRSTUVWXYZ@<span class="error">!</span><span class="error">#</span><span class="error">$</span><span class="error">%</span>^<span class="error">&amp;</span>*()_+-=<span class="error">&quot;</span>
+RandomName = <span class="error">&quot;</span><span class="error">&quot;</span>
+
+Panjang = Text2.Text
+<span class="keyword">For</span> i = <span class="integer">1</span> <span class="keyword">To</span> Panjang
+Randomize
+a = Int(Rnd * <span class="integer">76</span>)
+RandomName = RandomName <span class="error">&amp;</span> Mid(alp, a, <span class="integer">1</span>)
+Next i
+Text1.Text = RandomName
+
+<span class="keyword">End</span> Sub</pre></div>
+</div></div>
+<div class='post_tags'>
+<h4>Tags</h4>
+<div class='post_tags_list'>programming, security</div>
+</div>
+<div class='post_responses'>
+<h4>1181 views and 0 responses</h4>
+<ul class='post_responses list'>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
